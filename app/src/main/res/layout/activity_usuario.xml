@@ -11,6 +11,19 @@
     android:paddingBottom="0dp"
     tools:context=".UsuarioActivity">
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="350dp">
+
+        <ImageView
+            android:id="@+id/imageView19"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/logout_fill0_wght400_grad0_opsz48" />
+    </LinearLayout>
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="302dp"
