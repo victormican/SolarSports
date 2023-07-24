@@ -6,12 +6,24 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher_solarsports"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher_solarsports_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SolarSports"
         tools:targetApi="31">
+        <activity
+            android:name=".Categoria_GimnasiosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Categoria_CanchasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Registro"
+            android:exported="false" />
+        <activity
+            android:name=".Registro_GimActivity"
+            android:exported="false" />
         <activity
             android:name=".Beneficios"
             android:exported="false" />
@@ -19,7 +31,7 @@
             android:name=".Estadisticas"
             android:exported="false" />
         <activity
-            android:name=".Registro"
+            android:name=".Registro_Canchas"
             android:exported="false" />
         <activity
             android:name=".Categorias"
@@ -31,7 +43,7 @@
             android:name=".Home"
             android:exported="false" />
         <activity
-            android:name=".Usuario"
+            android:name=".UsuarioActivity"
             android:exported="false" />
         <activity
             android:name=".Recuperar"
