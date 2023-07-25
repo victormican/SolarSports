@@ -91,7 +91,7 @@
             android:text="Olvidaste tu contraseña ?" />
 
         <TextView
-            android:id="@+id/textView13"
+            android:id="@+id/textViewRecuperar"
             android:layout_width="145dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -101,16 +101,23 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btnIngresar"
+    <LinearLayout
+        android:id="@+id/LayoutIngresar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#f7fade"
-        android:gravity="bottom"
-        android:paddingTop="12dp"
-        android:paddingBottom="12dp"
-        android:text="Ingresar"
-        android:textColor="#000000" />
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnIngresar"
+            android:layout_width="196dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:backgroundTint="#f7fade"
+            android:text="Ingresar"
+            android:textColor="#000000" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -130,7 +137,7 @@
             android:text="Eres nuevo?" />
 
         <TextView
-            android:id="@+id/textView131"
+            android:id="@+id/textViewRegistrar"
             android:layout_width="140dp"
             android:layout_height="wrap_content"
             android:layout_weight="0"

@@ -235,19 +235,18 @@
         android:paddingBottom="12dp">
 
         <ImageView
-            android:id="@+id/imageView14"
+            android:id="@+id/imageViewBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"
             app:srcCompat="@drawable/arrow_back_ios_fill0_wght400_grad0_opsz48" />
 
         <Button
-            android:id="@+id/btnIngresar"
-            android:layout_width="206dp"
+            android:id="@+id/btnRegistrar"
+            android:layout_width="157dp"
             android:layout_height="wrap_content"
+            android:layout_weight="0"
             android:backgroundTint="#f7fade"
-            android:paddingTop="12dp"
-            android:paddingBottom="12dp"
             android:text="Registrar"
             android:textColor="#000000" />
 
