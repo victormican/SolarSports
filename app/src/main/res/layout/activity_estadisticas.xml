@@ -70,7 +70,9 @@
             android:layout_weight="1"
             android:paddingTop="12dp"
             android:paddingBottom="12dp"
-            android:text="Estadisticas" />
+            android:text="Estadisticas"
+            android:textSize="14dp"
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/imageView10"
@@ -90,18 +92,67 @@
         android:layout_weight="1"
         android:background="#ffa834"
         android:orientation="horizontal"
-        android:paddingLeft="30dp"
         android:paddingTop="12dp"
         android:paddingBottom="12dp">
 
         <TableLayout
+            android:id="@+id/tableLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/tableLayout">
+            android:layout_height="match_parent">
 
             <TableRow
                 android:layout_width="wrap_content"
                 android:layout_height="58dp"
+                android:background="#283593"
+                tools:layout_conversion_absoluteHeight="0dp"
+                tools:layout_conversion_absoluteWidth="302dp"
+                tools:layout_editor_absoluteX="60dp"
+                tools:layout_editor_absoluteY="398dp">
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="54dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="MES"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="PROMEDIO ENERGIA"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="89dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="CATEGORIA"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="AHORRO"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 tools:layout_conversion_absoluteHeight="0dp"
                 tools:layout_conversion_absoluteWidth="302dp"
                 tools:layout_editor_absoluteX="60dp"
@@ -111,33 +162,25 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:layout_conversion_absoluteHeight="0dp"
-                tools:layout_editor_absoluteY="398dp"
+                tools:layout_conversion_absoluteWidth="302dp"
                 tools:layout_editor_absoluteX="60dp"
-                tools:layout_conversion_absoluteWidth="302dp" />
+                tools:layout_editor_absoluteY="398dp" />
 
             <TableRow
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:layout_conversion_absoluteHeight="0dp"
-                tools:layout_editor_absoluteY="398dp"
+                tools:layout_conversion_absoluteWidth="302dp"
                 tools:layout_editor_absoluteX="60dp"
-                tools:layout_conversion_absoluteWidth="302dp" />
+                tools:layout_editor_absoluteY="398dp" />
 
             <TableRow
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:layout_conversion_absoluteHeight="0dp"
-                tools:layout_editor_absoluteY="398dp"
+                tools:layout_conversion_absoluteWidth="302dp"
                 tools:layout_editor_absoluteX="60dp"
-                tools:layout_conversion_absoluteWidth="302dp" />
-
-            <TableRow
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:layout_conversion_absoluteHeight="0dp"
-                tools:layout_editor_absoluteY="398dp"
-                tools:layout_editor_absoluteX="60dp"
-                tools:layout_conversion_absoluteWidth="302dp" />
+                tools:layout_editor_absoluteY="398dp" />
         </TableLayout>
     </LinearLayout>
 
