@@ -9,7 +9,7 @@
     android:orientation="vertical"
     android:paddingLeft="0dp"
     android:paddingBottom="0dp"
-    tools:context=".Home">
+    tools:context=".HomeActivity">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -117,8 +117,8 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="20dp"
@@ -148,8 +148,8 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="20dp"
@@ -179,8 +179,8 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_gravity="bottom"
         android:clipToPadding="true"
         android:gravity="bottom"
@@ -189,8 +189,8 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="61dp"
+            android:layout_height="match_parent"
             android:background="#0025F4"
             android:backgroundTint="#0025F4"
             app:srcCompat="@drawable/home_fill0_wght400_grad0_opsz48"
@@ -202,7 +202,7 @@
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:background="#0025F4"
             app:srcCompat="@drawable/search_fill0_wght400_grad0_opsz48"
             tools:layout_conversion_absoluteHeight="44dp"
@@ -235,7 +235,7 @@
         <ImageView
             android:id="@+id/imageView7"
             android:layout_width="63dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:background="#0025F4"
             app:srcCompat="@drawable/query_stats_fill0_wght400_grad0_opsz48"
             tools:layout_conversion_absoluteHeight="44dp"
@@ -256,7 +256,7 @@
 
         <ImageView
             android:id="@+id/imageView11"
-            android:layout_width="65dp"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:background="#0025F4"
             app:srcCompat="@drawable/account_circle_fill0_wght400_grad0_opsz48"
