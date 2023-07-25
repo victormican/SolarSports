@@ -33,7 +33,7 @@
         app:srcCompat="@drawable/image_pasted_2023_20_07_at_14_24_56" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/textViewSolars"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingBottom="5dp"
@@ -42,7 +42,7 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/textViewTittle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingBottom="5dp"
@@ -124,7 +124,7 @@
             app:srcCompat="@drawable/arrow_back_ios_fill0_wght400_grad0_opsz48" />
 
         <Button
-            android:id="@+id/buttonIngresar"
+            android:id="@+id/btnIngresar"
             android:layout_width="242dp"
             android:layout_height="wrap_content"
             android:backgroundTint="#f7fade"
