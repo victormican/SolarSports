@@ -18,6 +18,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
         login = findViewById(R.id.btnIngresar);
         registrarse = findViewById(R.id.textViewRegistrar);
         recuperar = findViewById(R.id.textViewRecuperar);
