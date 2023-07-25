@@ -18,7 +18,7 @@
         android:paddingLeft="350dp">
 
         <ImageView
-            android:id="@+id/imageView19"
+            android:id="@+id/imageViewExit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/logout_fill0_wght400_grad0_opsz48" />
@@ -151,7 +151,7 @@
         android:paddingTop="120dp">
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/imageViewHomeIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#0025F4"
@@ -163,7 +163,7 @@
             tools:layout_editor_absoluteY="795dp" />
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/imageViewSearchIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#0025F4"
@@ -174,7 +174,7 @@
             tools:layout_editor_absoluteY="795dp" />
 
         <ImageView
-            android:id="@+id/imageView5"
+            android:id="@+id/imageViewCategoryIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#0025F4"
@@ -185,7 +185,7 @@
             tools:layout_editor_absoluteY="795dp" />
 
         <ImageView
-            android:id="@+id/imageView6"
+            android:id="@+id/imageViewRegisterIcon"
             android:layout_width="61dp"
             android:layout_height="wrap_content"
             android:background="#0025F4"
@@ -196,7 +196,7 @@
             tools:layout_editor_absoluteY="795dp" />
 
         <ImageView
-            android:id="@+id/imageView7"
+            android:id="@+id/imageViewStadisticsIcon"
             android:layout_width="63dp"
             android:layout_height="wrap_content"
             android:background="#0025F4"
@@ -207,7 +207,7 @@
             tools:layout_editor_absoluteY="795dp" />
 
         <ImageView
-            android:id="@+id/imageView8"
+            android:id="@+id/imageViewBenefitsIcon"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:background="#0025F4"
@@ -218,7 +218,7 @@
             tools:layout_editor_absoluteY="795dp" />
 
         <ImageView
-            android:id="@+id/imageView11"
+            android:id="@+id/imageViewUserIcon"
             android:layout_width="65dp"
             android:layout_height="wrap_content"
             android:background="#0025F4"

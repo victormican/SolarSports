@@ -17,7 +17,7 @@
         android:paddingLeft="350dp">
 
         <ImageView
-            android:id="@+id/imageView19"
+            android:id="@+id/imageViewExit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/logout_fill0_wght400_grad0_opsz48" />
