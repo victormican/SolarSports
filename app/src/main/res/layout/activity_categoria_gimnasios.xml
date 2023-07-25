@@ -166,7 +166,7 @@
         android:clipToPadding="true"
         android:gravity="bottom"
         android:orientation="horizontal"
-        android:paddingTop="120dp">
+        android:paddingTop="70dp">
 
         <ImageView
             android:id="@+id/imageView2"

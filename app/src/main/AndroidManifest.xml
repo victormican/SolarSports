@@ -43,9 +43,6 @@
             android:name=".Buscar"
             android:exported="false" />
         <activity
-            android:name=".Home"
-            android:exported="false" />
-        <activity
             android:name=".UsuarioActivity"
             android:exported="false" />
         <activity
@@ -55,10 +52,10 @@
             android:name=".Registrar"
             android:exported="false" />
         <activity
-            android:name=".Login"
+            android:name=".Home"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
