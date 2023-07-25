@@ -23,14 +23,14 @@ public class LoginActivity extends AppCompatActivity {
         registrarse = findViewById(R.id.textViewRegistrar);
         recuperar = findViewById(R.id.textViewRecuperar);
 
-        Intent home = new Intent(this, HomeActivity.class);
+        Intent homeView = new Intent(this, HomeActivity.class);
         Intent registrarView = new Intent(this, Registrar.class);
         Intent recuperarView = new Intent(this, Recuperar.class);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                startActivity(home);
+                startActivity(homeView);
             }
         });
 

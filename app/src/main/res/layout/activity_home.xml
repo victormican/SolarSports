@@ -68,7 +68,7 @@
         android:paddingBottom="12dp">
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/textViewCategory"
             android:layout_width="186dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -77,7 +77,7 @@
             android:text="Categorias" />
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/imageViewCategory"
             android:layout_width="184dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -101,7 +101,7 @@
         android:paddingBottom="20dp">
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/textViewRegister"
             android:layout_width="186dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -110,7 +110,7 @@
             android:text="Registro" />
 
         <ImageView
-            android:id="@+id/imageView9"
+            android:id="@+id/imageViewRegister"
             android:layout_width="108dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -133,7 +133,7 @@
         android:paddingBottom="12dp">
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/textViewEstadistic"
             android:layout_width="224dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -142,7 +142,7 @@
             android:text="Estadisticas" />
 
         <ImageView
-            android:id="@+id/imageView10"
+            android:id="@+id/imageViewStadistic"
             android:layout_width="174dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -165,7 +165,7 @@
         android:paddingBottom="12dp">
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/textViewBenefits"
             android:layout_width="224dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -174,7 +174,7 @@
             android:text="Beneficios" />
 
         <ImageView
-            android:id="@+id/imageView12"
+            android:id="@+id/imageViewBenefits"
             android:layout_width="172dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -183,6 +183,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/LayoutButtons"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="bottom"

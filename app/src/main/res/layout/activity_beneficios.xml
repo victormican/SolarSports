@@ -73,7 +73,7 @@
             android:text="Beneficios" />
 
         <ImageView
-            android:id="@+id/imageView12"
+            android:id="@+id/imageViewBenefits"
             android:layout_width="172dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
