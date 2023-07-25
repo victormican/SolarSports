@@ -31,6 +31,7 @@ public class HomeActivity extends AppCompatActivity {
     ImageView benefits;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +56,10 @@ public class HomeActivity extends AppCompatActivity {
         stadistics = findViewById(R.id.imageViewStadisticsIcon);
         benefits = findViewById(R.id.imageViewBenefitsIcon);
 
+        imageViewStadistic = findViewById(R.id.imageViewStadistic);
+        textViewStadistic = findViewById(R.id.textViewEstadistic);
+        imageViewBenefits = findViewById(R.id.imageViewBenefits);
+        textViewBenefits = findViewById(R.id.textViewBenefits);
 
         Intent loginView = new Intent(this, LoginActivity.class);
 
@@ -71,6 +76,9 @@ public class HomeActivity extends AppCompatActivity {
         Intent searchView  = new Intent(this, Buscar.class);
 
         Intent userProfileView  = new Intent(this, UsuarioActivity.class);
+
+
+
 
         exit.setOnClickListener(new View.OnClickListener() {
             @Override

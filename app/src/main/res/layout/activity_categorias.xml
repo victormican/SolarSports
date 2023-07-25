@@ -67,7 +67,7 @@
         android:paddingBottom="12dp">
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/textViewCategory2"
             android:layout_width="186dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -92,6 +92,7 @@
         android:text="Instalacion Deportiva" />
 
     <LinearLayout
+        android:id="@+id/LayoutCancha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
@@ -108,7 +109,7 @@
         android:paddingBottom="12dp">
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/textViewCancha"
             android:layout_width="186dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -117,7 +118,7 @@
             android:text="Canchas Cubiertas" />
 
         <ImageView
-            android:id="@+id/imageView17"
+            android:id="@+id/imageViewCancha"
             android:layout_width="146dp"
             android:layout_height="58dp"
             android:layout_weight="1"
@@ -126,6 +127,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/LayoutGimnasios"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
@@ -142,7 +144,7 @@
         android:paddingBottom="12dp">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/textViewGim"
             android:layout_width="186dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -151,7 +153,7 @@
             android:text="Gimnasios" />
 
         <ImageView
-            android:id="@+id/imageView18"
+            android:id="@+id/imageViewGim"
             android:layout_width="139dp"
             android:layout_height="53dp"
             android:layout_weight="1"
@@ -160,6 +162,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/LayoutButtons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
