@@ -40,7 +40,7 @@ public class Categorias extends AppCompatActivity {
         exit = findViewById(R.id.imageViewExit);
 
         imageVCategory = findViewById(R.id.imageViewCategory);
-        textVCategory = findViewById(R.id.textViewCategory2);
+        textVCategory = findViewById(R.id.textViewCancha);
 
         home = findViewById(R.id.imageViewHomeIcon);
         search = findViewById(R.id.imageViewSearchIcon);

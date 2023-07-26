@@ -65,7 +65,7 @@
         android:paddingBottom="20dp">
 
         <TextView
-            android:id="@+id/textViewCategory2"
+            android:id="@+id/textViewCancha"
             android:layout_width="186dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
