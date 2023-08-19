@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class Categoria_CanchasActivity extends AppCompatActivity {
+public class CategoriaGimnasiosActivity extends AppCompatActivity {
     ImageView exit;
     ImageView imageVCategory;
 
@@ -24,17 +24,15 @@ public class Categoria_CanchasActivity extends AppCompatActivity {
     ImageView benefits;
 
 
-    TextView textViewCancha;
+    TextView textViewGim;
 
     Button registrar;
-    ImageView imageViewCancha;
+    ImageView imageViewGim;
     ImageView back ;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_categoria_canchas);
+        setContentView(R.layout.activity_categoria_gimnasios);
 
         exit = findViewById(R.id.imageViewExit);
 
@@ -48,12 +46,12 @@ public class Categoria_CanchasActivity extends AppCompatActivity {
         stadistics = findViewById(R.id.imageViewStadisticsIcon);
         benefits = findViewById(R.id.imageViewBenefitsIcon);
 
-        textViewCancha = findViewById(R.id.textViewCancha);
-        imageViewCancha = findViewById(R.id.imageViewCancha);
+        textViewGim = findViewById(R.id.textViewGim);
+        imageViewGim = findViewById(R.id.imageViewGim);
 
-        Intent registrarView = new Intent(this, Categoria_CanchasActivity.class);
+        Intent registrarView = new Intent(this, CategoriaCanchasActivity.class);
 
-        Intent backView = new Intent(this, Categoria_CanchasActivity.class);
+        Intent backView = new Intent(this, CategoriaCanchasActivity.class);
 
         Intent loginView = new Intent(this, LoginActivity.class);
 
@@ -71,7 +69,7 @@ public class Categoria_CanchasActivity extends AppCompatActivity {
 
         Intent userProfileView = new Intent(this, UsuarioActivity.class);
 
-        Intent CategoryCanchaView = new Intent(this, Categoria_CanchasActivity.class);
+        Intent CategoryGimView = new Intent(this, CategoriaGimnasiosActivity.class);
 
 
         registrar.setOnClickListener(new View.OnClickListener() {
@@ -154,17 +152,17 @@ public class Categoria_CanchasActivity extends AppCompatActivity {
             }
         });
 
-        textViewCancha.setOnClickListener(new View.OnClickListener() {
+        textViewGim.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(CategoryCanchaView);
+                startActivity(CategoryGimView);
             }
         });
 
-        imageViewCancha.setOnClickListener(new View.OnClickListener() {
+        imageViewGim.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(CategoryCanchaView);
+                startActivity(CategoryGimView);
             }
         });
 

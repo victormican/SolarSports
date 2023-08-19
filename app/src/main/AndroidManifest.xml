@@ -16,10 +16,10 @@
             android:name=".ActualizarUsuarioActivity"
             android:exported="false" />
         <activity
-            android:name=".Categoria_GimnasiosActivity"
+            android:name=".CategoriaGimnasiosActivity"
             android:exported="false" />
         <activity
-            android:name=".Categoria_CanchasActivity"
+            android:name=".CategoriaCanchasActivity"
             android:exported="false" />
         <activity
             android:name=".Registro"

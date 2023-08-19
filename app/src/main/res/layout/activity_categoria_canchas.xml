@@ -7,7 +7,7 @@
     android:background="#F4EB49"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context=".Categoria_CanchasActivity">
+    tools:context=".CategoriaCanchasActivity">
 
     <LinearLayout
         android:layout_width="wrap_content"

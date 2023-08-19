@@ -40,7 +40,7 @@ public class Categorias extends AppCompatActivity {
         exit = findViewById(R.id.imageViewExit);
 
         imageVCategory = findViewById(R.id.imageViewCategory);
-        textVCategory = findViewById(R.id.textViewCancha);
+        textVCategory =  findViewById(R.id.textViewCategorys);
 
         home = findViewById(R.id.imageViewHomeIcon);
         search = findViewById(R.id.imageViewSearchIcon);
@@ -52,10 +52,13 @@ public class Categorias extends AppCompatActivity {
 
         textViewCancha = findViewById(R.id.textViewCancha);
         imageViewCancha = findViewById(R.id.imageViewCancha);
+
         textViewGim = findViewById(R.id.textViewGim);
         imageViewGim = findViewById(R.id.imageViewGim);
 
-        Intent loginView = new Intent(this, LoginActivity.class);
+
+
+        Intent exitView = new Intent(this, LoginActivity.class);
 
         Intent CategoryView = new Intent(this, Categorias.class);
 
@@ -71,14 +74,14 @@ public class Categorias extends AppCompatActivity {
 
         Intent userProfileView = new Intent(this, UsuarioActivity.class);
 
-        Intent CategoryCanchaView = new Intent(this, Categoria_CanchasActivity.class);
+        Intent CategoryCanchasView = new Intent(this, CategoriaCanchasActivity.class);
 
-        Intent CategoryGimView = new Intent(this, Categoria_GimnasiosActivity.class );
+        Intent CategoryGimView = new Intent(this, CategoriaGimnasiosActivity.class );
 
         exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(loginView);
+                startActivity(exitView);
             }
         });
         imageVCategory.setOnClickListener(new View.OnClickListener() {
@@ -94,6 +97,7 @@ public class Categorias extends AppCompatActivity {
                 startActivity(CategoryView);
             }
         });
+
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -140,14 +144,14 @@ public class Categorias extends AppCompatActivity {
         textViewCancha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(CategoryCanchaView);
+                startActivity(CategoryCanchasView);
             }
         });
 
         imageViewCancha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(CategoryCanchaView);
+                startActivity(CategoryCanchasView);
             }
         });
         textViewGim.setOnClickListener(new View.OnClickListener() {
