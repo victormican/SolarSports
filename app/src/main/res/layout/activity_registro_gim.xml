@@ -56,68 +56,6 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="20dp"
-        android:layout_weight="0"
-        android:background="#91e4fb"
-        android:orientation="horizontal"
-        android:paddingStart="30dp"
-        android:paddingTop="12dp"
-        android:paddingEnd="30dp"
-        android:paddingBottom="20dp">
-
-        <TextView
-            android:id="@+id/textViewCancha"
-            android:layout_width="186dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingTop="12dp"
-            android:paddingBottom="12dp"
-            android:text="Registro" />
-
-        <ImageView
-            android:id="@+id/imageViewRegister"
-            android:layout_width="108dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/app_registration_fill0_wght400_grad0_opsz48" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="20dp"
-        android:layout_weight="0"
-        android:background="#91e4fb"
-        android:orientation="horizontal"
-        android:paddingStart="30dp"
-        android:paddingTop="12dp"
-        android:paddingEnd="30dp"
-        android:paddingBottom="20dp">
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="155dp"
-            android:layout_height="15dp"
-            android:layout_weight="1"
-            android:text="Canchas Cubiertas" />
-
-        <ImageView
-            android:id="@+id/imageView16"
-            android:layout_width="147dp"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/d514eda8ecb3a0ad41f21106415768fc" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="20dp"
         android:layout_weight="1"
         android:background="#91e4fb"
         android:orientation="horizontal"

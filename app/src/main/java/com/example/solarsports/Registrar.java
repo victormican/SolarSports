@@ -21,7 +21,7 @@ public class Registrar extends AppCompatActivity {
     registrar = findViewById(R.id.btnRegistrar);
     ImageViewBack = findViewById(R.id.imageViewBack);
     ImageViewExit = findViewById(R.id.imageViewExit);
-    Intent recuperarView = new Intent(this, LoginActivity.class);
+    Intent registrarView = new Intent(this, LoginActivity.class);
     Intent backView = new Intent(this, LoginActivity.class);
     Intent exitView = new Intent(this, LoginActivity.class);
 
@@ -29,7 +29,7 @@ public class Registrar extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            startActivity(recuperarView);
+            startActivity(registrarView);
         }
     });
 

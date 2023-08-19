@@ -90,7 +90,7 @@
         android:layout_marginEnd="30dp"
         android:layout_weight="0"
         android:orientation="horizontal"
-        android:paddingBottom="60dp">
+        android:paddingBottom="0dp">
 
         <TextView
             android:id="@+id/textView121"
@@ -109,6 +109,36 @@
             android:ems="10"
             android:hint="Email"
             android:inputType="text" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_weight="0"
+        android:orientation="horizontal"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp">
+
+        <TextView
+            android:id="@+id/textView121"
+            android:layout_width="169dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:text="Nueva Contraseña :" />
+
+        <EditText
+            android:id="@+id/editTextTextPassword3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Nueva Contraseña"
+            android:inputType="textPassword" />
 
     </LinearLayout>
 
