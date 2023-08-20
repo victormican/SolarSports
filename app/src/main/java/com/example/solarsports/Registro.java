@@ -45,7 +45,7 @@ public class Registro extends AppCompatActivity {
         benefits = findViewById(R.id.imageViewBenefitsIcon);
 
 
-        ImageCancha = findViewById(R.id.imageViewCancha);
+        ImageCancha = findViewById(R.id.imageViewCanchas);
         ImageGim = findViewById(R.id.imageViewGimnasios);
         textCancha = findViewById(R.id.textViewCanchas);
         textGim = findViewById(R.id.textViewGimnasios);

@@ -46,8 +46,8 @@ public class CategoriaGimnasiosActivity extends AppCompatActivity {
         stadistics = findViewById(R.id.imageViewStadisticsIcon);
         benefits = findViewById(R.id.imageViewBenefitsIcon);
 
-        textViewGim = findViewById(R.id.textViewGim);
-        imageViewGim = findViewById(R.id.imageViewGim);
+        textViewGim = findViewById(R.id.textViewGimnasios);
+        imageViewGim = findViewById(R.id.imageViewGimnasios);
 
         Intent registrarView = new Intent(this, CategoriaCanchasActivity.class);
 

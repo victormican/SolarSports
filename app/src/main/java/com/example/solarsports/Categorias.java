@@ -50,11 +50,11 @@ public class Categorias extends AppCompatActivity {
         stadistics = findViewById(R.id.imageViewStadisticsIcon);
         benefits = findViewById(R.id.imageViewBenefitsIcon);
 
-        textViewCancha = findViewById(R.id.textViewCancha);
-        imageViewCancha = findViewById(R.id.imageViewCancha);
+        textViewCancha = findViewById(R.id.textViewCanchas);
+        imageViewCancha = findViewById(R.id.imageViewCanchas);
 
-        textViewGim = findViewById(R.id.textViewGim);
-        imageViewGim = findViewById(R.id.imageViewGim);
+        textViewGim = findViewById(R.id.textViewGimnasios);
+        imageViewGim = findViewById(R.id.imageViewGimnasios);
 
 
 
@@ -154,6 +154,7 @@ public class Categorias extends AppCompatActivity {
                 startActivity(CategoryCanchasView);
             }
         });
+
         textViewGim.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

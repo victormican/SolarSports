@@ -22,12 +22,14 @@ public class CategoriaCanchasActivity extends AppCompatActivity {
     ImageView userProfile;
     ImageView stadistics;
     ImageView benefits;
-
+    Button registrar;
+    ImageView imageCancha;
 
     TextView textCancha;
 
-    Button registrar;
-    ImageView imageCancha;
+    ImageView imageGim;
+
+    TextView textGim;
     ImageView back ;
 
 
@@ -48,8 +50,9 @@ public class CategoriaCanchasActivity extends AppCompatActivity {
         stadistics = findViewById(R.id.imageViewStadisticsIcon);
         benefits = findViewById(R.id.imageViewBenefitsIcon);
 
-        textCancha = findViewById(R.id.textViewCancha);
-        imageCancha = findViewById(R.id.imageViewCancha);
+        textCancha = findViewById(R.id.textViewCanchas);
+        imageCancha = findViewById(R.id.imageViewCanchas);
+
 
         Intent registrarView = new Intent(this, CategoriaCanchasActivity.class);
 
@@ -72,7 +75,7 @@ public class CategoriaCanchasActivity extends AppCompatActivity {
         Intent userProfileView = new Intent(this, UsuarioActivity.class);
 
         Intent CategoryCanchaView = new Intent(this, CategoriaCanchasActivity.class);
-
+        Intent CategoryGimView = new Intent(this, CategoriaGimnasiosActivity.class);
 
         registrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -168,5 +171,18 @@ public class CategoriaCanchasActivity extends AppCompatActivity {
             }
         });
 
+        textGim.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(CategoryGimView);
+            }
+        });
+
+        imageGim.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(CategoryGimView);
+            }
+        });
     }
 }

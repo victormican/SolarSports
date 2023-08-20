@@ -65,7 +65,7 @@
         android:paddingBottom="20dp">
 
         <TextView
-            android:id="@+id/textViewCancha"
+            android:id="@+id/textViewCanchas"
             android:layout_width="186dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -104,7 +104,7 @@
             android:text="Canchas Cubiertas" />
 
         <ImageView
-            android:id="@+id/imageViewCancha"
+            android:id="@+id/imageViewCanchas"
             android:layout_width="159dp"
             android:layout_height="54dp"
             android:layout_weight="1"

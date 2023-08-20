@@ -24,6 +24,8 @@ public class UsuarioActivity extends AppCompatActivity {
     ImageView userProfile;
     ImageView stadistics;
     ImageView benefits;
+
+    ImageView ActualizarUsuario;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +39,9 @@ public class UsuarioActivity extends AppCompatActivity {
         userProfile = findViewById(R.id.imageViewUserIcon);
         stadistics = findViewById(R.id.imageViewStadisticsIcon);
         benefits = findViewById(R.id.imageViewBenefitsIcon);
+        ActualizarUsuario = findViewById(R.id.imageActualizarUsuario);
 
+        Intent ActualizarUsuarioView = new Intent(this, ActualizarUsuarioActivity.class);
         Intent exitView = new Intent(this, LoginActivity.class);
 
         Intent CategoryView = new Intent(this, Categorias.class);
@@ -100,6 +104,13 @@ public class UsuarioActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(ViewBenefits);
+            }
+        });
+
+        ActualizarUsuario.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(ActualizarUsuarioView);
             }
         });
     }
