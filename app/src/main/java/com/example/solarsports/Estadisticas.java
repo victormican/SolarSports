@@ -5,8 +5,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
+
+import com.example.solarsports.models.Canchas;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Estadisticas extends AppCompatActivity {
 
@@ -25,6 +36,9 @@ public class Estadisticas extends AppCompatActivity {
     ImageView stadistics;
     ImageView benefits;
 
+    TableLayout tableEstadisticas;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +52,11 @@ public class Estadisticas extends AppCompatActivity {
         userProfile = findViewById(R.id.imageViewUserIcon);
         stadistics = findViewById(R.id.imageViewStadisticsIcon);
         benefits = findViewById(R.id.imageViewBenefitsIcon);
+        tableEstadisticas = findViewById(R.id.tableEstadisticas);
+
+        imageVEstadisticas = findViewById(R.id.imageViewStadistic);
+
+        textVEstadisticas = findViewById(R.id.textViewEstadisticas);
 
         Intent exitView = new Intent(this, LoginActivity.class);
 
@@ -54,6 +73,15 @@ public class Estadisticas extends AppCompatActivity {
         Intent searchView = new Intent(this, Buscar.class);
 
         Intent userProfileView = new Intent(this, UsuarioActivity.class);
+
+
+
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(homeView);
+            }
+        });
         ImageViewExit.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -103,5 +131,20 @@ public class Estadisticas extends AppCompatActivity {
                 startActivity(ViewBenefits);
             }
         });
+
+        textVEstadisticas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(ViewStadistic);
+            }
+        });
+        imageVEstadisticas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(ViewStadistic);
+            }
+        });
+
+
     }
 }

@@ -140,7 +140,7 @@ public class RegistroGim extends AppCompatActivity {
                         !editTextMes.getText().toString().isEmpty())
                 {
                     //Almacenar en txt
-                    File file = new File(getFilesDir(),"CanchasRegistos.xt");
+                    File file = new File(getFilesDir(),"GimRegistros.xt");
                     try {
                         FileWriter writer = new FileWriter(file,true);
                         BufferedWriter bufferedWriter = new BufferedWriter(writer);
@@ -160,6 +160,7 @@ public class RegistroGim extends AppCompatActivity {
                     editTextConsumoKW.setText("");
                     editTextValorKW.setText("");
                     editTextMes.setText("");
+                    Toast.makeText(RegistroGim.this ,"Registrado",Toast.LENGTH_LONG).show();
 
                 }else{
                     Toast.makeText(RegistroGim.this ,"Valide que los campos no esten vacios",Toast.LENGTH_LONG).show();

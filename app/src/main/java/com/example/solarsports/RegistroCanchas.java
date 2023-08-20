@@ -149,7 +149,7 @@ public class RegistroCanchas extends AppCompatActivity {
                         !editTextMes.getText().toString().isEmpty())
                  {
                      //Almacenar en txt
-                     File file = new File(getFilesDir(),"CanchasRegistos.xt");
+                     File file = new File(getFilesDir(),"CanchasRegistros.xt");
                      try {
                          FileWriter writer = new FileWriter(file,true);
                          BufferedWriter bufferedWriter = new BufferedWriter(writer);
@@ -169,11 +169,14 @@ public class RegistroCanchas extends AppCompatActivity {
                      editTextConsumoKW.setText("");
                      editTextValorKW.setText("");
                      editTextMes.setText("");
+                     Toast.makeText(RegistroCanchas.this ,"Registrado",Toast.LENGTH_LONG).show();
+                     startActivity(registrarView);
 
                 }else{
                     Toast.makeText(RegistroCanchas.this ,"Valide que los campos no esten vacios",Toast.LENGTH_LONG).show();
+                    startActivity(RegistrCanchaView);
                 }
-                startActivity(registrarView);
+
             }
         });
 
