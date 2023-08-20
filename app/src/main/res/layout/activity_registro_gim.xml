@@ -9,7 +9,7 @@
     android:orientation="vertical"
     android:paddingLeft="0dp"
     android:paddingBottom="0dp"
-    tools:context=".Registro_GimActivity">
+    tools:context=".Registro_Gim">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -56,23 +56,23 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="20dp"
-        android:layout_weight="1"
+        android:layout_weight="0"
         android:background="#91e4fb"
         android:orientation="horizontal"
         android:paddingStart="30dp"
-        android:paddingTop="12dp"
+        android:paddingTop="10dp"
         android:paddingEnd="30dp"
-        android:paddingBottom="20dp">
+        android:paddingBottom="10dp">
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="155dp"
-            android:layout_height="15dp"
+            android:layout_height="23dp"
             android:layout_weight="1"
             android:text="Gimnasios" />
 
         <ImageView
-            android:id="@+id/imageView20"
+            android:id="@+id/imageViewGimnasios"
             android:layout_width="134dp"
             android:layout_height="78dp"
             android:layout_weight="1"
@@ -83,11 +83,141 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="horizontal"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp">
+
+        <TextView
+            android:id="@+id/textViewNombreGim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Nombre Gimnasio: " />
+
+        <EditText
+            android:id="@+id/editTextNombreGim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Nombre Gimnasio"
+            android:inputType="text" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="horizontal"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp">
+
+        <TextView
+            android:id="@+id/textViewConsumoKW"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Consumo en KW :" />
+
+        <EditText
+            android:id="@+id/editTextConsumoKW"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Consumo KW"
+            android:inputType="text" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="horizontal"
+        android:paddingTop="0dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:id="@+id/textViewValorKW"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Valor KW :" />
+
+        <EditText
+            android:id="@+id/editTextValorKW"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Valor KW"
+            android:inputType="text" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="horizontal"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp">
+
+        <TextView
+            android:id="@+id/textViewMes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Mes Registro : " />
+
+        <EditText
+            android:id="@+id/editTextMes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Mes Resgistro"
+            android:inputType="text" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/imageViewBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            app:srcCompat="@drawable/arrow_back_ios_fill0_wght400_grad0_opsz48" />
+
+        <Button
+            android:id="@+id/btnRegistrar"
+            android:layout_width="157dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:backgroundTint="#f7fade"
+            android:text="Registrar"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:clipToPadding="true"
         android:gravity="bottom"
         android:orientation="horizontal"
-        android:paddingTop="120dp">
+        android:paddingTop="17dp">
 
         <ImageView
             android:id="@+id/imageViewHomeIcon"

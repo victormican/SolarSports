@@ -25,7 +25,7 @@
             android:name=".Registro"
             android:exported="false" />
         <activity
-            android:name=".Registro_GimActivity"
+            android:name=".Registro_Gim"
             android:exported="false" />
         <activity
             android:name=".Beneficios"

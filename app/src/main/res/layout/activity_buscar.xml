@@ -66,7 +66,7 @@
         android:paddingBottom="12dp">
 
         <TextView
-            android:id="@+id/textViewCancha"
+            android:id="@+id/textViewBuscar"
             android:layout_width="186dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -76,8 +76,49 @@
             android:text="Buscar" />
 
         <ImageView
-            android:id="@+id/imageView13"
+            android:id="@+id/imageViewBuscar"
             android:layout_width="164dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/search_fill0_wght400_grad0_opsz48" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_weight="0"
+        android:background="#0277BD"
+        android:backgroundTintMode="add"
+        android:orientation="horizontal"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp">
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Buscar : " />
+
+        <EditText
+            android:id="@+id/editTextText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Buscar" />
+
+        <ImageView
+            android:id="@+id/imageViewBuscar2"
+            android:layout_width="61dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             app:srcCompat="@drawable/search_fill0_wght400_grad0_opsz48" />
@@ -101,53 +142,10 @@
         android:paddingBottom="12dp">
 
         <ListView
+            android:id="@+id/listView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="bottom"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="20dp"
-        android:layout_weight="1"
-        android:background="#0277BD"
-        android:backgroundTintMode="add"
-        android:orientation="horizontal"
-        android:paddingLeft="30dp"
-        android:paddingTop="12dp"
-        android:paddingBottom="12dp">
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/edit_fill0_wght400_grad0_opsz48" />
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/add_fill0_wght400_grad0_opsz48" />
-
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/delete_fill0_wght400_grad0_opsz48" />
-
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/update_fill0_wght400_grad0_opsz48" />
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
 
     </LinearLayout>
 

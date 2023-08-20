@@ -9,13 +9,13 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class Registro_Canchas extends AppCompatActivity {
+public class Registro_Gim extends AppCompatActivity {
     ImageView ImageViewExit;
 
 
-    ImageView imageVRegistro_Cancha;
+    ImageView imageVRegistro_GIM;
 
-    TextView textVRegistro_Cancha;
+    TextView textVRegistro_GIM;
 
     ImageView home;
     ImageView search;
@@ -31,7 +31,7 @@ public class Registro_Canchas extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registro_canchas);
+        setContentView(R.layout.activity_registro_gim);
 
         ImageViewExit = findViewById(R.id.imageViewExit);
         home = findViewById(R.id.imageViewHomeIcon);
@@ -41,8 +41,6 @@ public class Registro_Canchas extends AppCompatActivity {
         userProfile = findViewById(R.id.imageViewUserIcon);
         stadistics = findViewById(R.id.imageViewStadisticsIcon);
         benefits = findViewById(R.id.imageViewBenefitsIcon);
-        registrar = findViewById(R.id.btnRegistrar);
-        ImageViewBack = findViewById(R.id.imageViewBack);
 
         Intent exitView = new Intent(this, LoginActivity.class);
 
