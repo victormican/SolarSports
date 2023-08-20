@@ -9,13 +9,11 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class Registro_Gim extends AppCompatActivity {
-    ImageView ImageViewExit;
+public class CategoriaGimActivity extends AppCompatActivity {
+    ImageView exit;
+    ImageView imageVCategory;
 
-
-    ImageView imageVRegistro_GIM;
-
-    TextView textVRegistro_GIM;
+    TextView textVCategory;
 
     ImageView home;
     ImageView search;
@@ -25,15 +23,21 @@ public class Registro_Gim extends AppCompatActivity {
     ImageView stadistics;
     ImageView benefits;
 
-    ImageView ImageViewBack;
+
+    TextView textViewGim;
 
     Button registrar;
+    ImageView imageViewGim;
+    ImageView back ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registro_gim);
+        setContentView(R.layout.activity_categoria_gimnasios);
 
-        ImageViewExit = findViewById(R.id.imageViewExit);
+        exit = findViewById(R.id.imageViewExit);
+
+        registrar = findViewById(R.id.btnRegistrar);
+        back = findViewById(R.id.imageViewBack);
         home = findViewById(R.id.imageViewHomeIcon);
         search = findViewById(R.id.imageViewSearchIcon);
         register = findViewById(R.id.imageViewRegisterIcon);
@@ -42,7 +46,14 @@ public class Registro_Gim extends AppCompatActivity {
         stadistics = findViewById(R.id.imageViewStadisticsIcon);
         benefits = findViewById(R.id.imageViewBenefitsIcon);
 
-        Intent exitView = new Intent(this, LoginActivity.class);
+        textViewGim = findViewById(R.id.textViewGimnasios);
+        imageViewGim = findViewById(R.id.imageViewGimnasios);
+
+        Intent registrarView = new Intent(this, CategoriaCanchasActivity.class);
+
+        Intent backView = new Intent(this, CategoriaCanchasActivity.class);
+
+        Intent loginView = new Intent(this, LoginActivity.class);
 
         Intent CategoryView = new Intent(this, Categorias.class);
 
@@ -58,13 +69,44 @@ public class Registro_Gim extends AppCompatActivity {
 
         Intent userProfileView = new Intent(this, UsuarioActivity.class);
 
-        Intent registrarView = new Intent(this, LoginActivity.class);
-        Intent backView = new Intent(this, LoginActivity.class);
-        ImageViewExit.setOnClickListener(new View.OnClickListener() {
+        Intent CategoryGimView = new Intent(this, CategoriaGimActivity.class);
 
+
+        registrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(exitView);
+                startActivity(registrarView);
+            }
+
+
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(backView);
+            }
+
+
+        });
+
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(loginView);
+            }
+        });
+        imageVCategory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(CategoryView);
+            }
+        });
+
+        textVCategory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(CategoryView);
             }
         });
         home.setOnClickListener(new View.OnClickListener() {
@@ -110,20 +152,19 @@ public class Registro_Gim extends AppCompatActivity {
             }
         });
 
-        registrar.setOnClickListener(new View.OnClickListener() {
-
+        textViewGim.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(registrarView);
+                startActivity(CategoryGimView);
             }
         });
 
-        ImageViewBack.setOnClickListener(new View.OnClickListener() {
-
+        imageViewGim.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(backView);
+                startActivity(CategoryGimView);
             }
         });
+
     }
 }

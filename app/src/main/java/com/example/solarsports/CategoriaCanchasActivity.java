@@ -75,7 +75,7 @@ public class CategoriaCanchasActivity extends AppCompatActivity {
         Intent userProfileView = new Intent(this, UsuarioActivity.class);
 
         Intent CategoryCanchaView = new Intent(this, CategoriaCanchasActivity.class);
-        Intent CategoryGimView = new Intent(this, CategoriaGimnasiosActivity.class);
+        Intent CategoryGimView = new Intent(this, CategoriaGimActivity.class);
 
         registrar.setOnClickListener(new View.OnClickListener() {
             @Override

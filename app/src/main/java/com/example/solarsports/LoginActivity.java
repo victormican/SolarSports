@@ -21,7 +21,7 @@ public class LoginActivity extends AppCompatActivity {
 
         login = findViewById(R.id.btnIngresar);
         registrarse = findViewById(R.id.textViewRegistrar);
-        recuperar = findViewById(R.id.textViewRecuperar);
+        recuperar = findViewById(R.id.textViewRecuperarAqui);
 
         Intent homeView = new Intent(this, HomeActivity.class);
         Intent registrarView = new Intent(this, Registrar.class);

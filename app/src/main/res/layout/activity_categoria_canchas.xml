@@ -51,8 +51,8 @@
         android:backgroundTintMode="add"
         android:orientation="horizontal"
         android:paddingLeft="30dp"
-        android:paddingTop="12dp"
-        android:paddingBottom="12dp">
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp">
 
         <TextView
             android:id="@+id/textViewCanchas"
@@ -84,25 +84,25 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
         android:layout_weight="0"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/textViewNombre_Cancha"
-            android:layout_width="166dp"
+            android:layout_width="118dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingTop="12dp"
+            android:layout_weight="0"
+            android:paddingTop="0dp"
             android:text="Nombre_Cancha:" />
 
         <EditText
             android:id="@+id/editTextNombre_Cancha"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
+            android:layout_height="45dp"
+            android:layout_weight="0"
+            android:ems="25"
             android:hint="Nombre_Cancha"
             android:inputType="text" />
 
@@ -111,25 +111,25 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
         android:layout_weight="0"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/textViewNombre_Terraza"
-            android:layout_width="166dp"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingTop="12dp"
+            android:layout_weight="0"
+            android:paddingTop="0dp"
             android:text="Nombre_Terraza:" />
 
         <EditText
             android:id="@+id/editTextNombre_Terraza"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
+            android:layout_height="45dp"
+            android:layout_weight="0"
+            android:ems="25"
             android:hint="Nombre_Terraza"
             android:inputType="text" />
 
@@ -138,26 +138,26 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
         android:layout_weight="0"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/textLongitud"
-            android:layout_width="161dp"
+            android:layout_width="122dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingTop="12dp"
-            android:paddingBottom="12dp"
+            android:layout_weight="0"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
             android:text="Longitud :" />
 
         <EditText
             android:id="@+id/editTextLongitud"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
+            android:layout_height="45dp"
+            android:layout_weight="0"
+            android:ems="25"
             android:hint="Longitud"
             android:inputType="text" />
 
@@ -166,26 +166,26 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
         android:layout_weight="0"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/textViewAncho"
-            android:layout_width="161dp"
+            android:layout_width="117dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingTop="12dp"
-            android:paddingBottom="12dp"
+            android:layout_weight="0"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
             android:text="Ancho :" />
 
         <EditText
             android:id="@+id/editTextAncho"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
+            android:layout_height="45dp"
+            android:layout_weight="0"
+            android:ems="25"
             android:hint="Ancho"
             android:inputType="text" />
 
@@ -194,26 +194,26 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
         android:layout_weight="0"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/textViewPotencia"
-            android:layout_width="168dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingTop="12dp"
-            android:paddingBottom="12dp"
+            android:layout_weight="0"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
             android:text="Potencia Nominal:" />
 
         <EditText
             android:id="@+id/editTextPotencia"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
+            android:layout_height="45dp"
+            android:layout_weight="0"
+            android:ems="25"
             android:hint="Potencia"
             android:inputType="text" />
 
@@ -222,26 +222,26 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
         android:layout_weight="0"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/textViewHoras"
-            android:layout_width="169dp"
+            android:layout_width="117dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingTop="12dp"
-            android:paddingBottom="12dp"
+            android:layout_weight="0"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
             android:text="Horas de Sol:" />
 
         <EditText
             android:id="@+id/editTextHoras"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
+            android:layout_height="45dp"
+            android:layout_weight="0"
+            android:ems="25"
             android:hint="Horas"
             android:inputType="text" />
 
@@ -250,26 +250,26 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
         android:layout_weight="0"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/textViewMes"
-            android:layout_width="168dp"
+            android:layout_width="112dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingTop="12dp"
-            android:paddingBottom="12dp"
+            android:layout_weight="0"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
             android:text="Mes:" />
 
         <EditText
             android:id="@+id/editTextMes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
+            android:layout_weight="0"
+            android:ems="25"
             android:hint="Mes"
             android:inputType="text" />
 
@@ -280,20 +280,20 @@
         android:layout_height="wrap_content"
         android:layout_weight="0"
         android:orientation="horizontal"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp">
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp">
 
         <ImageView
             android:id="@+id/imageViewBack"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="32dp"
+            android:layout_height="38dp"
             android:layout_weight="0"
             app:srcCompat="@drawable/arrow_back_ios_fill0_wght400_grad0_opsz48" />
 
         <Button
             android:id="@+id/btnRegistrar"
-            android:layout_width="157dp"
-            android:layout_height="wrap_content"
+            android:layout_width="186dp"
+            android:layout_height="match_parent"
             android:layout_weight="0"
             android:backgroundTint="#f7fade"
             android:text="Registrar"

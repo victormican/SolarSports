@@ -9,7 +9,7 @@
     android:orientation="vertical"
     android:paddingLeft="0dp"
     android:paddingBottom="0dp"
-    tools:context=".Registro_Gim">
+    tools:context=".RegistroGim">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -60,9 +60,9 @@
         android:background="#91e4fb"
         android:orientation="horizontal"
         android:paddingStart="30dp"
-        android:paddingTop="10dp"
+        android:paddingTop="0dp"
         android:paddingEnd="30dp"
-        android:paddingBottom="10dp">
+        android:paddingBottom="0dp">
 
         <TextView
             android:id="@+id/textView3"
@@ -79,6 +79,14 @@
             app:srcCompat="@drawable/_b4fbe906c63b6cb3e95a30f1bc14dd6" />
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewTittle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:text="Registro Consumo"
+        android:textSize="20sp" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -142,14 +150,14 @@
 
         <TextView
             android:id="@+id/textViewValorKW"
-            android:layout_width="wrap_content"
+            android:layout_width="88dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Valor KW :" />
 
         <EditText
             android:id="@+id/editTextValorKW"
-            android:layout_width="wrap_content"
+            android:layout_width="233dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
@@ -175,7 +183,7 @@
 
         <EditText
             android:id="@+id/editTextMes"
-            android:layout_width="wrap_content"
+            android:layout_width="222dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
@@ -217,7 +225,7 @@
         android:clipToPadding="true"
         android:gravity="bottom"
         android:orientation="horizontal"
-        android:paddingTop="17dp">
+        android:paddingTop="5dp">
 
         <ImageView
             android:id="@+id/imageViewHomeIcon"

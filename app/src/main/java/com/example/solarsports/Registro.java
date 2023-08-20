@@ -67,8 +67,8 @@ public class Registro extends AppCompatActivity {
 
         Intent userProfileView = new Intent(this, UsuarioActivity.class);
 
-        Intent RegistroCanchaView = new Intent(this, Registro_Canchas.class);
-        Intent RegistroGimView = new Intent(this, Registro_Gim.class);
+        Intent RegistroCanchaView = new Intent(this, RegistroCanchas.class);
+        Intent RegistroGimView = new Intent(this, RegistroGim.class);
 
 
         ImageViewExit.setOnClickListener(new View.OnClickListener() {

@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class Registro_Canchas extends AppCompatActivity {
+public class RegistroCanchas extends AppCompatActivity {
     ImageView ImageViewExit;
 
 
@@ -60,8 +60,8 @@ public class Registro_Canchas extends AppCompatActivity {
 
         Intent userProfileView = new Intent(this, UsuarioActivity.class);
 
-        Intent registrarView = new Intent(this, LoginActivity.class);
-        Intent backView = new Intent(this, LoginActivity.class);
+        Intent registrarView = new Intent(this, Registro.class);
+        Intent backView = new Intent(this, Registro.class);
         ImageViewExit.setOnClickListener(new View.OnClickListener() {
 
             @Override

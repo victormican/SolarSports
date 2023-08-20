@@ -64,7 +64,7 @@
         android:paddingBottom="12dp">
 
         <TextView
-            android:id="@+id/textViewCanchas"
+            android:id="@+id/textViewBBeneficios"
             android:layout_width="224dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -73,7 +73,7 @@
             android:text="Beneficios" />
 
         <ImageView
-            android:id="@+id/imageViewBenefits"
+            android:id="@+id/imageViewBeneficios"
             android:layout_width="172dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -95,7 +95,7 @@
         android:paddingBottom="12dp">
 
         <ImageView
-            android:id="@+id/imageView21"
+            android:id="@+id/imageViewNube"
             android:layout_width="411dp"
             android:layout_height="104dp"
             android:layout_gravity="center"
@@ -105,10 +105,9 @@
         <TextView
             android:id="@+id/textViewConsejos"
             android:layout_width="317dp"
-            android:layout_height="157dp"
+            android:layout_height="94dp"
             android:layout_weight="0"
-            android:gravity="center_horizontal"
-            android:text="TextView" />
+            android:gravity="center_horizontal" />
     </LinearLayout>
 
     <LinearLayout

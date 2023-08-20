@@ -7,7 +7,7 @@
     android:background="#F4EB49"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context=".CategoriaGimnasiosActivity">
+    tools:context=".CategoriaGimActivity">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -52,13 +52,13 @@
         android:backgroundTintMode="add"
         android:orientation="horizontal"
         android:paddingLeft="30dp"
-        android:paddingTop="12dp"
-        android:paddingBottom="12dp">
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp">
 
         <TextView
             android:id="@+id/textViewGimnasios"
             android:layout_width="186dp"
-            android:layout_height="wrap_content"
+            android:layout_height="49dp"
             android:layout_weight="1"
             android:paddingTop="12dp"
             android:paddingBottom="12dp"
@@ -66,8 +66,8 @@
 
         <ImageView
             android:id="@+id/imageViewGimnasios"
-            android:layout_width="139dp"
-            android:layout_height="53dp"
+            android:layout_width="165dp"
+            android:layout_height="49dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/_b4fbe906c63b6cb3e95a30f1bc14dd6" />
 
@@ -91,16 +91,16 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textViewNombre_Cancha"
+            android:id="@+id/textViewNombreCancha"
             android:layout_width="166dp"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_weight="1"
             android:paddingTop="12dp"
             android:text="Nombre_Cancha:" />
 
         <EditText
-            android:id="@+id/editTextNombre_Cancha"
-            android:layout_width="wrap_content"
+            android:id="@+id/editTextNombreCancha"
+            android:layout_width="205dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
@@ -118,7 +118,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textViewNombre_Terraza"
+            android:id="@+id/textViewNombreTerraza"
             android:layout_width="166dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -126,7 +126,7 @@
             android:text="Nombre_Terraza:" />
 
         <EditText
-            android:id="@+id/editTextNombre_Terraza"
+            android:id="@+id/editTextNombreTerraza"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -281,20 +281,20 @@
         android:layout_height="wrap_content"
         android:layout_weight="0"
         android:orientation="horizontal"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp">
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp">
 
         <ImageView
             android:id="@+id/imageViewBack"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="31dp"
+            android:layout_height="36dp"
             android:layout_weight="0"
             app:srcCompat="@drawable/arrow_back_ios_fill0_wght400_grad0_opsz48" />
 
         <Button
             android:id="@+id/btnRegistrar"
-            android:layout_width="157dp"
-            android:layout_height="wrap_content"
+            android:layout_width="185dp"
+            android:layout_height="match_parent"
             android:layout_weight="0"
             android:backgroundTint="#f7fade"
             android:text="Registrar"

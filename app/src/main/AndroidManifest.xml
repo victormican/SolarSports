@@ -16,7 +16,7 @@
             android:name=".ActualizarUsuarioActivity"
             android:exported="false" />
         <activity
-            android:name=".CategoriaGimnasiosActivity"
+            android:name=".CategoriaGimActivity"
             android:exported="false" />
         <activity
             android:name=".CategoriaCanchasActivity"
@@ -25,7 +25,7 @@
             android:name=".Registro"
             android:exported="false" />
         <activity
-            android:name=".Registro_Gim"
+            android:name=".RegistroGim"
             android:exported="false" />
         <activity
             android:name=".Beneficios"
@@ -34,7 +34,7 @@
             android:name=".Estadisticas"
             android:exported="false" />
         <activity
-            android:name=".Registro_Canchas"
+            android:name=".RegistroCanchas"
             android:exported="false" />
         <activity
             android:name=".Categorias"

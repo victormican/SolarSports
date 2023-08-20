@@ -97,7 +97,7 @@
         android:paddingBottom="20dp">
 
         <TextView
-            android:id="@+id/textViewCanchas"
+            android:id="@+id/textViewRegistro"
             android:layout_width="155dp"
             android:layout_height="20dp"
             android:layout_weight="1"

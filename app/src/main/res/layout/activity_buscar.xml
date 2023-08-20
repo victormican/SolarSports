@@ -100,21 +100,14 @@
         android:paddingTop="0dp"
         android:paddingBottom="0dp">
 
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="64dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Buscar : " />
-
         <EditText
-            android:id="@+id/editTextText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/editTextSearch"
+            android:layout_width="271dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="text"
-            android:text="Buscar" />
+            android:hint="Busqueda"
+            android:inputType="text" />
 
         <ImageView
             android:id="@+id/imageViewBuscar2"
@@ -142,10 +135,10 @@
         android:paddingBottom="12dp">
 
         <ListView
-            android:id="@+id/listView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
+            android:id="@+id/listViewSearch"
+            android:layout_width="275dp"
+            android:layout_height="141dp"
+            android:layout_weight="0" />
 
     </LinearLayout>
 

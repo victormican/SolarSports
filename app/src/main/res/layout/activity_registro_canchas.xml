@@ -9,7 +9,7 @@
     android:orientation="vertical"
     android:paddingLeft="0dp"
     android:paddingBottom="0dp"
-    tools:context=".Registro_Canchas">
+    tools:context=".RegistroCanchas">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -150,14 +150,14 @@
 
         <TextView
             android:id="@+id/textViewValorKW"
-            android:layout_width="wrap_content"
+            android:layout_width="78dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Valor KW :" />
 
         <EditText
             android:id="@+id/editTextValorKW"
-            android:layout_width="wrap_content"
+            android:layout_width="241dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
@@ -183,7 +183,7 @@
 
         <EditText
             android:id="@+id/editTextMes"
-            android:layout_width="wrap_content"
+            android:layout_width="226dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
