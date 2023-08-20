@@ -6,8 +6,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 
 public class RegistroCanchas extends AppCompatActivity {
     ImageView ImageViewExit;
@@ -28,6 +35,10 @@ public class RegistroCanchas extends AppCompatActivity {
     ImageView ImageViewBack;
 
     Button registrar;
+
+    EditText editTextNombreCancha , editTextConsumoKW , editTextValorKW , editTextMes ;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +54,19 @@ public class RegistroCanchas extends AppCompatActivity {
         benefits = findViewById(R.id.imageViewBenefitsIcon);
         registrar = findViewById(R.id.btnRegistrar);
         ImageViewBack = findViewById(R.id.imageViewBack);
+
+        imageVRegistrCancha = findViewById(R.id.imageViewRRCanchas);
+
+        textVRegistroCancha = findViewById(R.id.textViewRRCancha);
+
+
+        editTextNombreCancha= findViewById(R.id.editTextNombreCancha);
+        editTextConsumoKW= findViewById(R.id.editTextConsumoKW);
+        editTextValorKW= findViewById(R.id.editTextValorKW);
+        editTextMes = findViewById(R.id.editTextMes);
+
+
+
 
         Intent exitView = new Intent(this, LoginActivity.class);
 
@@ -62,6 +86,8 @@ public class RegistroCanchas extends AppCompatActivity {
 
         Intent registrarView = new Intent(this, Registro.class);
         Intent backView = new Intent(this, Registro.class);
+        Intent RegistrCanchaView = new Intent(this, RegistroCanchas.class);
+
         ImageViewExit.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -116,6 +142,37 @@ public class RegistroCanchas extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                //Verificar vacios los campos
+                if(!editTextNombreCancha.getText().toString().isEmpty() &&
+                        !editTextConsumoKW.getText().toString().isEmpty()  &&
+                        !editTextValorKW.getText().toString().isEmpty()  &&
+                        !editTextMes.getText().toString().isEmpty())
+                 {
+                     //Almacenar en txt
+                     File file = new File(getFilesDir(),"CanchasRegistos.xt");
+                     try {
+                         FileWriter writer = new FileWriter(file,true);
+                         BufferedWriter bufferedWriter = new BufferedWriter(writer);
+                         String registrocancha =
+                                 editTextNombreCancha.getText().toString()+","+
+                                 editTextConsumoKW.getText().toString()+","+
+                         editTextValorKW.getText().toString()+","+
+                         editTextMes.getText().toString();
+                         bufferedWriter.write(registrocancha);
+                         bufferedWriter.newLine();
+                         bufferedWriter.close();
+
+                     }catch (Exception e){
+                         e.printStackTrace();
+                     }
+                     editTextNombreCancha.setText("");
+                     editTextConsumoKW.setText("");
+                     editTextValorKW.setText("");
+                     editTextMes.setText("");
+
+                }else{
+                    Toast.makeText(RegistroCanchas.this ,"Valide que los campos no esten vacios",Toast.LENGTH_LONG).show();
+                }
                 startActivity(registrarView);
             }
         });
@@ -127,5 +184,23 @@ public class RegistroCanchas extends AppCompatActivity {
                 startActivity(backView);
             }
         });
+        imageVRegistrCancha.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                startActivity(RegistrCanchaView);
+            }
+        });
+
+        textVRegistroCancha.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                startActivity(RegistrCanchaView);
+            }
+        });
+
+
+
     }
 }

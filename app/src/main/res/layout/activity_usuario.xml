@@ -67,7 +67,7 @@
         android:paddingBottom="12dp">
 
         <TextView
-            android:id="@+id/textViewCanchas"
+            android:id="@+id/textViewUUser"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -76,7 +76,7 @@
             android:text="Usuario" />
 
         <ImageView
-            android:id="@+id/imageView15"
+            android:id="@+id/imageViewUser"
             android:layout_width="184dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"

@@ -6,8 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 
 public class RegistroGim extends AppCompatActivity {
     ImageView Exit;
@@ -28,6 +34,8 @@ public class RegistroGim extends AppCompatActivity {
     ImageView Back;
 
     Button registrar;
+
+    EditText editTextNombreGim , editTextConsumoKW , editTextValorKW , editTextMes ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,9 +51,13 @@ public class RegistroGim extends AppCompatActivity {
         benefits = findViewById(R.id.imageViewBenefitsIcon);
         registrar  = findViewById(R.id.btnRegistrar);
         Back = findViewById(R.id.imageViewBack);
-        imageVRegistroG= findViewById(R.id.imageViewBenefitsIcon);
+        imageVRegistroG= findViewById(R.id.imageViewRRGimnasios);
         textVRegistroG= findViewById(R.id.textViewRRGim);
 
+        editTextNombreGim= findViewById(R.id.editTextNombreGim);
+        editTextConsumoKW= findViewById(R.id.editTextConsumoKW);
+        editTextValorKW= findViewById(R.id.editTextValorKW);
+        editTextMes = findViewById(R.id.editTextMes);
 
         Intent exitView = new Intent(this, LoginActivity.class);
 
@@ -121,6 +133,37 @@ public class RegistroGim extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                //Verificar vacios los campos
+                if(!editTextNombreGim.getText().toString().isEmpty() &&
+                        !editTextConsumoKW.getText().toString().isEmpty()  &&
+                        !editTextValorKW.getText().toString().isEmpty()  &&
+                        !editTextMes.getText().toString().isEmpty())
+                {
+                    //Almacenar en txt
+                    File file = new File(getFilesDir(),"CanchasRegistos.xt");
+                    try {
+                        FileWriter writer = new FileWriter(file,true);
+                        BufferedWriter bufferedWriter = new BufferedWriter(writer);
+                        String registrocancha =
+                                editTextNombreGim.getText().toString()+","+
+                                        editTextConsumoKW.getText().toString()+","+
+                                        editTextValorKW.getText().toString()+","+
+                                        editTextMes.getText().toString();
+                        bufferedWriter.write(registrocancha);
+                        bufferedWriter.newLine();
+                        bufferedWriter.close();
+
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+                    editTextNombreGim.setText("");
+                    editTextConsumoKW.setText("");
+                    editTextValorKW.setText("");
+                    editTextMes.setText("");
+
+                }else{
+                    Toast.makeText(RegistroGim.this ,"Valide que los campos no esten vacios",Toast.LENGTH_LONG).show();
+                }
                 startActivity(registrarView);
             }
         });
@@ -147,5 +190,6 @@ public class RegistroGim extends AppCompatActivity {
                 startActivity(RegistroGView);
             }
         });
+
     }
 }

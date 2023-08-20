@@ -91,6 +91,8 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
         android:layout_weight="0"
         android:orientation="horizontal"
         android:paddingTop="0dp"
@@ -100,15 +102,15 @@
             android:id="@+id/textViewNombreGim"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="0"
             android:text="Nombre Gimnasio: " />
 
         <EditText
             android:id="@+id/editTextNombreGim"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
+            android:layout_height="48dp"
+            android:layout_weight="0"
+            android:ems="25"
             android:hint="Nombre Gimnasio"
             android:inputType="text" />
 
@@ -117,6 +119,7 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
         android:layout_weight="0"
         android:orientation="horizontal"
         android:paddingTop="0dp"
@@ -126,15 +129,15 @@
             android:id="@+id/textViewConsumoKW"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="0"
             android:text="Consumo en KW :" />
 
         <EditText
             android:id="@+id/editTextConsumoKW"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
+            android:layout_height="48dp"
+            android:layout_weight="0"
+            android:ems="25"
             android:hint="Consumo KW"
             android:inputType="text" />
 
@@ -143,6 +146,8 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
         android:layout_weight="0"
         android:orientation="horizontal"
         android:paddingTop="0dp"
@@ -150,17 +155,17 @@
 
         <TextView
             android:id="@+id/textViewValorKW"
-            android:layout_width="88dp"
+            android:layout_width="108dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="0"
             android:text="Valor KW :" />
 
         <EditText
             android:id="@+id/editTextValorKW"
-            android:layout_width="233dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
+            android:layout_width="263dp"
+            android:layout_height="48dp"
+            android:layout_weight="0"
+            android:ems="25"
             android:hint="Valor KW"
             android:inputType="text" />
 
@@ -169,6 +174,8 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
         android:layout_weight="0"
         android:orientation="horizontal"
         android:paddingTop="0dp"
@@ -176,17 +183,17 @@
 
         <TextView
             android:id="@+id/textViewMes"
-            android:layout_width="wrap_content"
+            android:layout_width="104dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="0"
             android:text="Mes Registro : " />
 
         <EditText
             android:id="@+id/editTextMes"
-            android:layout_width="222dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
+            android:layout_width="249dp"
+            android:layout_height="48dp"
+            android:layout_weight="0"
+            android:ems="25"
             android:hint="Mes Resgistro"
             android:inputType="text" />
 
@@ -197,8 +204,8 @@
         android:layout_height="wrap_content"
         android:layout_weight="0"
         android:orientation="horizontal"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp">
+        android:paddingTop="0dp"
+        android:paddingBottom="5dp">
 
         <ImageView
             android:id="@+id/imageViewBack"

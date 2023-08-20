@@ -13,9 +13,9 @@ public class UsuarioActivity extends AppCompatActivity {
     ImageView ImageViewExit;
 
 
-    ImageView imageVRegistro;
+    ImageView imageVUser;
 
-    TextView textVRegistro;
+    TextView textVUser;
 
     ImageView home;
     ImageView search;
@@ -40,6 +40,10 @@ public class UsuarioActivity extends AppCompatActivity {
         stadistics = findViewById(R.id.imageViewStadisticsIcon);
         benefits = findViewById(R.id.imageViewBenefitsIcon);
         ActualizarUsuario = findViewById(R.id.imageActualizarUsuario);
+
+        imageVUser= findViewById(R.id.imageViewUser);
+
+        textVUser= findViewById(R.id.textViewUUser);
 
         Intent ActualizarUsuarioView = new Intent(this, ActualizarUsuarioActivity.class);
         Intent exitView = new Intent(this, LoginActivity.class);
@@ -108,6 +112,19 @@ public class UsuarioActivity extends AppCompatActivity {
         });
 
         ActualizarUsuario.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(ActualizarUsuarioView);
+            }
+        });
+        textVUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(ViewBenefits);
+            }
+        });
+
+        imageVUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(ActualizarUsuarioView);
