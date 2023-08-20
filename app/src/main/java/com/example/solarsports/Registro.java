@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class Registro extends AppCompatActivity {
 
 
-    ImageView ImageViewExit;
+    ImageView Exit;
 
 
     ImageView imageVRegistro;
@@ -27,15 +27,19 @@ public class Registro extends AppCompatActivity {
     ImageView benefits;
 
 
-    ImageView ImageCancha;
-    ImageView ImageGim;
-    TextView textCancha;
-    TextView textGim;
+    ImageView ICancha;
+    ImageView IGim;
+
+    TextView tCancha;
+    TextView tGim;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
-        ImageViewExit = findViewById(R.id.imageViewExit);
+
+        Exit = findViewById(R.id.imageViewExit);
         home = findViewById(R.id.imageViewHomeIcon);
         search = findViewById(R.id.imageViewSearchIcon);
         register = findViewById(R.id.imageViewRegisterIcon);
@@ -45,10 +49,14 @@ public class Registro extends AppCompatActivity {
         benefits = findViewById(R.id.imageViewBenefitsIcon);
 
 
-        ImageCancha = findViewById(R.id.imageViewCanchas);
-        ImageGim = findViewById(R.id.imageViewGimnasios);
-        textCancha = findViewById(R.id.textViewCanchas);
-        textGim = findViewById(R.id.textViewGimnasios);
+        ICancha = findViewById(R.id.imageViewRCanchas);
+        IGim = findViewById(R.id.imageViewRGimnasios);
+        tCancha = findViewById(R.id.textViewRCanchas);
+        tGim = findViewById(R.id.textViewRGimnasios);
+
+         imageVRegistro = findViewById(R.id.imageViewRRegistro);;
+
+         textVRegistro = findViewById(R.id.textViewRRegistro);;
 
 
         Intent exitView = new Intent(this, LoginActivity.class);
@@ -71,7 +79,7 @@ public class Registro extends AppCompatActivity {
         Intent RegistroGimView = new Intent(this, RegistroGim.class);
 
 
-        ImageViewExit.setOnClickListener(new View.OnClickListener() {
+        Exit.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -121,30 +129,43 @@ public class Registro extends AppCompatActivity {
             }
         });
 
-        ImageCancha.setOnClickListener(new View.OnClickListener() {
+        ICancha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(RegistroCanchaView);
             }
         });
 
-        textCancha.setOnClickListener(new View.OnClickListener() {
+        tCancha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(RegistroCanchaView);
             }
         });
-        ImageGim.setOnClickListener(new View.OnClickListener() {
+        IGim.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(RegistroGimView);
             }
         });
 
-        textGim.setOnClickListener(new View.OnClickListener() {
+        tGim.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(RegistroGimView);
+            }
+        });
+
+        textVRegistro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(ViewRegister);
+            }
+        });
+        imageVRegistro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(ViewRegister);
             }
         });
     }

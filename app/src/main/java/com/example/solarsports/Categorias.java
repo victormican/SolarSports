@@ -25,13 +25,13 @@ public class Categorias extends AppCompatActivity {
     ImageView benefits;
 
 
-    TextView textViewCCancha;
+    TextView CCancha;
 
-    TextView textViewCGim;
+    TextView CGim;
 
-    ImageView imageViewCCancha;
+    ImageView ICCancha;
 
-    ImageView imageViewCGim;
+    ImageView ICGim;
 
 
 
@@ -54,16 +54,12 @@ public class Categorias extends AppCompatActivity {
         stadistics = findViewById(R.id.imageViewStadisticsIcon);
         benefits = findViewById(R.id.imageViewBenefitsIcon);
 
-        textViewCCancha = findViewById(R.id.textViewCCanchas);
-        imageViewCCancha = findViewById(R.id.imageViewCCanchas);
+        CCancha = findViewById(R.id.textViewCCanchas);
+        ICCancha = findViewById(R.id.imageViewCCanchas);
 
-        textViewCGim = findViewById(R.id.textViewCGimnasios);
-        imageViewCGim = findViewById(R.id.imageViewCGimnasios);
+        CGim = findViewById(R.id.textViewCGimnasios);
+        ICGim = findViewById(R.id.imageViewCGimnasios);
 
-
-
-
-        Intent LayoutGimnasiosView = new Intent(this, CategoriaGimActivity.class);
 
         Intent exitView = new Intent(this, LoginActivity.class);
 
@@ -149,27 +145,27 @@ public class Categorias extends AppCompatActivity {
             }
         });
 
-        textViewCCancha.setOnClickListener(new View.OnClickListener() {
+        CCancha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(CategoryCanchasView);
             }
         });
 
-        imageViewCCancha.setOnClickListener(new View.OnClickListener() {
+        ICCancha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(CategoryCanchasView);
             }
         });
 
-        textViewCGim.setOnClickListener(new View.OnClickListener() {
+        CGim.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(CategoryGimView);
             }
         });
-        imageViewCGim.setOnClickListener(new View.OnClickListener() {
+        ICGim.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(CategoryGimView);

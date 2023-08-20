@@ -11,9 +11,9 @@ import android.widget.TextView;
 
 public class CategoriaCanchasActivity extends AppCompatActivity {
     ImageView exit;
-    ImageView imageVCategory;
+    ImageView imageVCategoryC;
 
-    TextView textVCategory;
+    TextView textVCategoryC;
 
     ImageView home;
     ImageView search;
@@ -23,13 +23,6 @@ public class CategoriaCanchasActivity extends AppCompatActivity {
     ImageView stadistics;
     ImageView benefits;
     Button registrar;
-    ImageView imageCancha;
-
-    TextView textCancha;
-
-    ImageView imageGim;
-
-    TextView textGim;
     ImageView back ;
 
 
@@ -50,13 +43,14 @@ public class CategoriaCanchasActivity extends AppCompatActivity {
         stadistics = findViewById(R.id.imageViewStadisticsIcon);
         benefits = findViewById(R.id.imageViewBenefitsIcon);
 
-        textCancha = findViewById(R.id.textViewCanchas);
-        imageCancha = findViewById(R.id.imageViewCanchas);
+        textVCategoryC= findViewById(R.id.textViewCanchas);
+        imageVCategoryC = findViewById(R.id.imageViewCanchas);
 
 
-        Intent registrarView = new Intent(this, CategoriaCanchasActivity.class);
 
-        Intent backView = new Intent(this, CategoriaCanchasActivity.class);
+        Intent registrarView = new Intent(this, Categorias.class);
+
+        Intent backView = new Intent(this, Categorias.class);
 
         Intent loginView = new Intent(this, LoginActivity.class);
 
@@ -75,7 +69,8 @@ public class CategoriaCanchasActivity extends AppCompatActivity {
         Intent userProfileView = new Intent(this, UsuarioActivity.class);
 
         Intent CategoryCanchaView = new Intent(this, CategoriaCanchasActivity.class);
-        Intent CategoryGimView = new Intent(this, CategoriaGimActivity.class);
+
+
 
         registrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,17 +96,17 @@ public class CategoriaCanchasActivity extends AppCompatActivity {
                 startActivity(loginView);
             }
         });
-        imageVCategory.setOnClickListener(new View.OnClickListener() {
+        imageVCategoryC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(CategoryView);
+                startActivity(CategoryCanchaView);
             }
         });
 
-        textVCategory.setOnClickListener(new View.OnClickListener() {
+        textVCategoryC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(CategoryView);
+                startActivity(CategoryCanchaView);
             }
         });
         home.setOnClickListener(new View.OnClickListener() {
@@ -157,32 +152,5 @@ public class CategoriaCanchasActivity extends AppCompatActivity {
             }
         });
 
-        textCancha.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(CategoryCanchaView);
-            }
-        });
-
-        imageCancha.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(CategoryCanchaView);
-            }
-        });
-
-        textGim.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(CategoryGimView);
-            }
-        });
-
-        imageGim.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(CategoryGimView);
-            }
-        });
     }
 }

@@ -13,9 +13,9 @@ public class RegistroCanchas extends AppCompatActivity {
     ImageView ImageViewExit;
 
 
-    ImageView imageVRegistro_Cancha;
+    ImageView imageVRegistrCancha;
 
-    TextView textVRegistro_Cancha;
+    TextView textVRegistroCancha;
 
     ImageView home;
     ImageView search;

@@ -11,9 +11,9 @@ import android.widget.TextView;
 
 public class CategoriaGimActivity extends AppCompatActivity {
     ImageView exit;
-    ImageView imageVCategory;
+    ImageView iVCategoryG;
 
-    TextView textVCategory;
+    TextView tVCategoryG;
 
     ImageView home;
     ImageView search;
@@ -23,11 +23,7 @@ public class CategoriaGimActivity extends AppCompatActivity {
     ImageView stadistics;
     ImageView benefits;
 
-
-    TextView textViewGim;
-
     Button registrar;
-    ImageView imageViewGim;
     ImageView back ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,12 +42,12 @@ public class CategoriaGimActivity extends AppCompatActivity {
         stadistics = findViewById(R.id.imageViewStadisticsIcon);
         benefits = findViewById(R.id.imageViewBenefitsIcon);
 
-        textViewGim = findViewById(R.id.textViewGimnasios);
-        imageViewGim = findViewById(R.id.imageViewGimnasios);
+        tVCategoryG = findViewById(R.id.textViewGimnasios);
+        iVCategoryG = findViewById(R.id.imageViewRRGimnasios);
 
-        Intent registrarView = new Intent(this, CategoriaCanchasActivity.class);
+        Intent registrarView = new Intent(this, Categorias.class);
 
-        Intent backView = new Intent(this, CategoriaCanchasActivity.class);
+        Intent backView = new Intent(this, Categorias.class);
 
         Intent loginView = new Intent(this, LoginActivity.class);
 
@@ -96,14 +92,14 @@ public class CategoriaGimActivity extends AppCompatActivity {
                 startActivity(loginView);
             }
         });
-        imageVCategory.setOnClickListener(new View.OnClickListener() {
+        iVCategoryG.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(CategoryView);
             }
         });
 
-        textVCategory.setOnClickListener(new View.OnClickListener() {
+        tVCategoryG.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(CategoryView);
@@ -149,20 +145,6 @@ public class CategoriaGimActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(ViewBenefits);
-            }
-        });
-
-        textViewGim.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(CategoryGimView);
-            }
-        });
-
-        imageViewGim.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(CategoryGimView);
             }
         });
 

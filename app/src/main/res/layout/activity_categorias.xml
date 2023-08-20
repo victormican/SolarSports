@@ -112,7 +112,7 @@
             android:id="@+id/textViewCCanchas"
             android:layout_width="186dp"
             android:layout_height="56dp"
-            android:layout_weight="1"
+            android:layout_weight="0"
             android:paddingTop="12dp"
             android:paddingBottom="12dp"
             android:text="Canchas Cubiertas" />
@@ -121,7 +121,7 @@
             android:id="@+id/imageViewCCanchas"
             android:layout_width="146dp"
             android:layout_height="62dp"
-            android:layout_weight="1"
+            android:layout_weight="0"
             app:srcCompat="@drawable/d514eda8ecb3a0ad41f21106415768fc" />
 
     </LinearLayout>
@@ -147,7 +147,7 @@
             android:id="@+id/textViewCGimnasios"
             android:layout_width="186dp"
             android:layout_height="50dp"
-            android:layout_weight="1"
+            android:layout_weight="0"
             android:paddingTop="12dp"
             android:paddingBottom="12dp"
             android:text="Gimnasios" />
@@ -156,7 +156,7 @@
             android:id="@+id/imageViewCGimnasios"
             android:layout_width="130dp"
             android:layout_height="68dp"
-            android:layout_weight="1"
+            android:layout_weight="0"
             app:srcCompat="@drawable/_b4fbe906c63b6cb3e95a30f1bc14dd6" />
 
     </LinearLayout>

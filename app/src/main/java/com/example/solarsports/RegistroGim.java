@@ -10,12 +10,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class RegistroGim extends AppCompatActivity {
-    ImageView ImageViewExit;
+    ImageView Exit;
 
 
-    ImageView imageVRegistro_GIM;
+    ImageView imageVRegistroG;
 
-    TextView textVRegistro_GIM;
+    TextView textVRegistroG;
 
     ImageView home;
     ImageView search;
@@ -25,7 +25,7 @@ public class RegistroGim extends AppCompatActivity {
     ImageView stadistics;
     ImageView benefits;
 
-    ImageView ImageViewBack;
+    ImageView Back;
 
     Button registrar;
     @Override
@@ -33,7 +33,7 @@ public class RegistroGim extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro_gim);
 
-        ImageViewExit = findViewById(R.id.imageViewExit);
+        Exit = findViewById(R.id.imageViewExit);
         home = findViewById(R.id.imageViewHomeIcon);
         search = findViewById(R.id.imageViewSearchIcon);
         register = findViewById(R.id.imageViewRegisterIcon);
@@ -41,6 +41,11 @@ public class RegistroGim extends AppCompatActivity {
         userProfile = findViewById(R.id.imageViewUserIcon);
         stadistics = findViewById(R.id.imageViewStadisticsIcon);
         benefits = findViewById(R.id.imageViewBenefitsIcon);
+        registrar  = findViewById(R.id.btnRegistrar);
+        Back = findViewById(R.id.imageViewBack);
+        imageVRegistroG= findViewById(R.id.imageViewBenefitsIcon);
+        textVRegistroG= findViewById(R.id.textViewRRGim);
+
 
         Intent exitView = new Intent(this, LoginActivity.class);
 
@@ -60,7 +65,9 @@ public class RegistroGim extends AppCompatActivity {
 
         Intent registrarView = new Intent(this, Registro.class);
         Intent backView = new Intent(this, Registro.class);
-        ImageViewExit.setOnClickListener(new View.OnClickListener() {
+        Intent RegistroGView = new Intent(this, RegistroGim.class);
+
+        Exit.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -118,11 +125,26 @@ public class RegistroGim extends AppCompatActivity {
             }
         });
 
-        ImageViewBack.setOnClickListener(new View.OnClickListener() {
+        Back.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 startActivity(backView);
+            }
+        });
+        textVRegistroG.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                startActivity(RegistroGView);
+            }
+        });
+
+        imageVRegistroG.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                startActivity(RegistroGView);
             }
         });
     }

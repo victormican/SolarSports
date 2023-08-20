@@ -65,7 +65,7 @@
             android:text="Gimnasios" />
 
         <ImageView
-            android:id="@+id/imageViewGimnasios"
+            android:id="@+id/imageViewRRGimnasios"
             android:layout_width="165dp"
             android:layout_height="49dp"
             android:layout_weight="1"

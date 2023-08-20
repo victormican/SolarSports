@@ -65,14 +65,14 @@
         android:paddingBottom="0dp">
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/textViewRRGim"
             android:layout_width="155dp"
             android:layout_height="23dp"
             android:layout_weight="1"
             android:text="Gimnasios" />
 
         <ImageView
-            android:id="@+id/imageViewGimnasios"
+            android:id="@+id/imageViewRRGimnasios"
             android:layout_width="134dp"
             android:layout_height="78dp"
             android:layout_weight="1"
@@ -225,7 +225,7 @@
         android:clipToPadding="true"
         android:gravity="bottom"
         android:orientation="horizontal"
-        android:paddingTop="5dp">
+        android:paddingTop="10dp">
 
         <ImageView
             android:id="@+id/imageViewHomeIcon"
