@@ -90,15 +90,15 @@
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="20dp"
         android:layout_weight="1"
-        android:background="#ffa834"
+        android:background="#02FFA834"
         android:orientation="horizontal"
-        android:paddingTop="12dp"
+        android:paddingTop="5dp"
         android:paddingBottom="12dp">
 
         <TableLayout
             android:id="@+id/tableEstadisticas"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
             <TableRow
                 android:layout_width="wrap_content"
@@ -150,37 +150,6 @@
                     android:textStyle="bold" />
             </TableRow>
 
-            <TableRow
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:layout_conversion_absoluteHeight="0dp"
-                tools:layout_conversion_absoluteWidth="302dp"
-                tools:layout_editor_absoluteX="60dp"
-                tools:layout_editor_absoluteY="398dp" />
-
-            <TableRow
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:layout_conversion_absoluteHeight="0dp"
-                tools:layout_conversion_absoluteWidth="302dp"
-                tools:layout_editor_absoluteX="60dp"
-                tools:layout_editor_absoluteY="398dp" />
-
-            <TableRow
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:layout_conversion_absoluteHeight="0dp"
-                tools:layout_conversion_absoluteWidth="302dp"
-                tools:layout_editor_absoluteX="60dp"
-                tools:layout_editor_absoluteY="398dp" />
-
-            <TableRow
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:layout_conversion_absoluteHeight="0dp"
-                tools:layout_conversion_absoluteWidth="302dp"
-                tools:layout_editor_absoluteX="60dp"
-                tools:layout_editor_absoluteY="398dp" />
         </TableLayout>
     </LinearLayout>
 

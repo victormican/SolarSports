@@ -48,7 +48,7 @@ public class LoginActivity extends AppCompatActivity {
                         !editTextPassword.getText().toString().isEmpty())
                 {
                     //Almacenar en txt
-                    File file = new File(getFilesDir(),"Login.xt");
+                    File file = new File(getFilesDir(),"Login.txt");
                     try {
                         FileWriter writer = new FileWriter(file,true);
                         BufferedWriter bufferedWriter = new BufferedWriter(writer);

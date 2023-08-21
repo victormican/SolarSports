@@ -46,7 +46,7 @@ public class Recuperar extends AppCompatActivity {
                         !editTextNuevaContrasena.getText().toString().isEmpty())
                 {
                     //Almacenar en txt
-                    File file = new File(getFilesDir(),"Recuperar.xt");
+                    File file = new File(getFilesDir(),"Recuperar.txt");
                     try {
                         FileWriter writer = new FileWriter(file,true);
                         BufferedWriter bufferedWriter = new BufferedWriter(writer);

@@ -140,7 +140,7 @@ public class RegistroGim extends AppCompatActivity {
                         !editTextMes.getText().toString().isEmpty())
                 {
                     //Almacenar en txt
-                    File file = new File(getFilesDir(),"GimRegistros.xt");
+                    File file = new File(getFilesDir(),"GimRegistros.txt");
                     try {
                         FileWriter writer = new FileWriter(file,true);
                         BufferedWriter bufferedWriter = new BufferedWriter(writer);
