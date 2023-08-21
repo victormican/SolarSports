@@ -25,8 +25,7 @@ import java.util.List;
 public class UsuarioActivity extends AppCompatActivity {
 
     ImageView ImageViewExit;
-    ImageView imageVUser;
-    TextView textVUser;
+
     ImageView home;
     ImageView search;
     ImageView register;
@@ -63,7 +62,7 @@ public class UsuarioActivity extends AppCompatActivity {
 
         // Intentos
         Intent ActualizarUsuarioContrasenaView = new Intent(this, ActualizarContrasenaActivity.class);
-        Intent EliminarUsuarioView = new Intent(this, EliminarUsuarioActivity.class);
+
         Intent ActualizarUsuarioView = new Intent(this, ActualizarUsuarioActivity.class);
         Intent exitView = new Intent(this, LoginActivity.class);
         Intent CategoryView = new Intent(this, Categorias.class);
@@ -75,6 +74,77 @@ public class UsuarioActivity extends AppCompatActivity {
         Intent userProfileView = new Intent(this, UsuarioActivity.class);
 
         // Listeners
+
+
+        category.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(CategoryView);
+            }
+        });
+
+        userProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(userProfileView);
+            }
+        });
+        stadistics.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(ViewStadistic);
+            }
+        });
+        benefits.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(ViewBenefits);
+            }
+        });
+
+        ActualizarUsuario.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(ActualizarUsuarioView);
+            }
+        });
+        imageViewChange.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(ActualizarUsuarioContrasenaView);
+            }
+        });
+
+        textEditUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(ActualizarUsuarioView);
+            }
+        });
+        textEditContrasena.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(ActualizarUsuarioContrasenaView);
+            }
+        });
+        imageViewUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(userProfileView);
+            }
+        });
+        textViewUUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(userProfileView);
+            }
+        });
+        textDeleteUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showConfirmationDialog();
+            }
+        });
         ImageViewExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

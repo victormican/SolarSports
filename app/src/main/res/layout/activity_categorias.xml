@@ -169,7 +169,7 @@
         android:clipToPadding="true"
         android:gravity="bottom"
         android:orientation="horizontal"
-        android:paddingTop="25dp">
+        android:paddingTop="35dp">
 
         <ImageView
             android:id="@+id/imageViewHomeIcon"

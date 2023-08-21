@@ -11,6 +11,18 @@
     android:paddingBottom="12dp"
     tools:context=".LoginActivity">
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="350dp">
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="57dp" />
+
+    </LinearLayout>
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="302dp"

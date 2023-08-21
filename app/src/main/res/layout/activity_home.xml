@@ -98,7 +98,7 @@
         android:paddingStart="30dp"
         android:paddingTop="10dp"
         android:paddingEnd="30dp"
-        android:paddingBottom="20dp">
+        android:paddingBottom="12dp">
 
         <TextView
             android:id="@+id/textViewRegister"
@@ -190,7 +190,7 @@
         android:clipToPadding="false"
         android:gravity="bottom"
         android:orientation="horizontal"
-        android:paddingTop="0dp">
+        android:paddingTop="8dp">
 
         <ImageView
             android:id="@+id/imageViewHomeIcon"
