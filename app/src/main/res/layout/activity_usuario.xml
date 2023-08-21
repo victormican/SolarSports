@@ -63,8 +63,8 @@
         android:backgroundTintMode="add"
         android:orientation="horizontal"
         android:paddingLeft="30dp"
-        android:paddingTop="12dp"
-        android:paddingBottom="12dp">
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
 
         <TextView
             android:id="@+id/textViewUUser"
@@ -85,45 +85,95 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="20dp"
-        android:layout_weight="1"
+        android:layout_weight="0"
         android:background="#0277BD"
         android:backgroundTintMode="add"
         android:orientation="horizontal"
         android:paddingLeft="30dp"
-        android:paddingTop="12dp"
-        android:paddingBottom="12dp">
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
 
         <TextView
             android:id="@+id/textEditUser"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="133dp"
+            android:layout_height="33dp"
             android:layout_weight="0"
             android:text="Editar Usuario :" />
 
         <ImageView
             android:id="@+id/imageActualizarUsuario"
-            android:layout_width="wrap_content"
+            android:layout_width="156dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             app:srcCompat="@drawable/edit_fill0_wght400_grad0_opsz48" />
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="0"
+        android:background="#0277BD"
+        android:backgroundTintMode="add"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:id="@+id/textEditContrasena"
+            android:layout_width="133dp"
+            android:layout_height="33dp"
+            android:layout_weight="0"
+            android:text="Editar Contraseña :" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="158dp"
+            android:layout_height="58dp"
+            android:layout_weight="0"
+            app:srcCompat="@drawable/password_fill0_wght400_grad0_opsz48" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="0"
+        android:background="#0277BD"
+        android:backgroundTintMode="add"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
         <TextView
             android:id="@+id/textDeleteUser"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="147dp"
+            android:layout_height="32dp"
             android:layout_weight="1"
             android:text="Eliminar Usuario :" />
 
         <ImageView
             android:id="@+id/imageDeleteUsuario"
-            android:layout_width="wrap_content"
+            android:layout_width="145dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             app:srcCompat="@drawable/delete_fill0_wght400_grad0_opsz48" />
@@ -137,7 +187,7 @@
         android:clipToPadding="true"
         android:gravity="bottom"
         android:orientation="horizontal"
-        android:paddingTop="120dp">
+        android:paddingTop="25dp">
 
         <ImageView
             android:id="@+id/imageViewHomeIcon"

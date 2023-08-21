@@ -71,7 +71,7 @@
             android:paddingTop="12dp"
             android:paddingBottom="12dp"
             android:text="Estadisticas"
-            android:textSize="14dp"
+            android:textSize="16sp"
             android:textStyle="bold" />
 
         <ImageView
@@ -86,11 +86,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
         android:layout_marginBottom="20dp"
         android:layout_weight="1"
-        android:background="#02FFA834"
+        android:background="#ffa834"
         android:orientation="horizontal"
         android:paddingTop="5dp"
         android:paddingBottom="12dp">
@@ -111,7 +111,7 @@
 
                 <TextView
                     android:id="@+id/textViewEMes"
-                    android:layout_width="54dp"
+                    android:layout_width="103dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="MES"

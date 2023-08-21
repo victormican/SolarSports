@@ -4,11 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.solarsports.models.UserSession;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -48,32 +51,21 @@ public class LoginActivity extends AppCompatActivity {
                 //Verificar vacios los campos
                 if(!editTextUser.getText().toString().isEmpty() &&
                         !editTextPassword.getText().toString().isEmpty())
-                {
-                    //Almacenar en txt
-                    File file = new File(getFilesDir(),"Login.txt");
-                    try {
-                        FileWriter writer = new FileWriter(file,true);
-                        BufferedWriter bufferedWriter = new BufferedWriter(writer);
-                        String usuarios =
-                                editTextUser.getText().toString()+","+
-                                        editTextPassword.getText().toString();
+                {Log.i("EditText",editTextUser.getText().toString()+"-"+
+                        editTextPassword.getText().toString());
+                    if(checkUser(editTextUser.getText().toString(),
+                            editTextPassword.getText().toString())){
 
-                        //validar que usuario y contraseña coincidan
-                        //Mostrar mensaje de error con el campo invalido
+                        UserSession userSession = UserSession.getInstance();
+                        userSession.setUsername(editTextUser.getText().toString());
 
-                        bufferedWriter.write(usuarios);
-                        bufferedWriter.newLine();
-                        bufferedWriter.close();
-
-                    }catch (Exception e){
-                        e.printStackTrace();
+                        Toast.makeText(LoginActivity.this ,"Exitoso",Toast.LENGTH_LONG).show();
+                        startActivity(homeView);
+                    }else{
+                        Toast.makeText(getApplicationContext(),
+                                "Los datos son incorrectos",Toast.LENGTH_LONG).show();
                     }
-                    editTextUser.setText("");
-                    editTextPassword.setText("");
-                    Toast.makeText(LoginActivity.this ,"Exitoso",Toast.LENGTH_LONG).show();
-                    startActivity(homeView);
-
-                }else{
+                    }else{
                     Toast.makeText(LoginActivity.this ,"Valide que los campos no esten vacios",Toast.LENGTH_LONG).show();
                     startActivity(LoginView);
                 }
@@ -97,25 +89,34 @@ public class LoginActivity extends AppCompatActivity {
         });
 
     }
-    private boolean checkCredentials(String username, String password) {
-        File file = new File(getFilesDir(), "Login.txt");
-        try {
-            FileReader reader = new FileReader(file);
-            BufferedReader bufferedReader = new BufferedReader(reader);
-            String line;
 
-            while ((line = bufferedReader.readLine()) != null) {
-                String[] userData = line.split(",");
-                if (userData.length >= 2 && userData[0].equals(username) && userData[1].equals(password)) {
-                    bufferedReader.close();
-                    return true; // Coinciden las credenciales
+    public boolean checkUser(String user, String pass){
+        //user --> email, username, phone
+        File file = new File(getFilesDir(),"userData.txt");
+        try {
+            BufferedReader reader= new BufferedReader(new FileReader(file));
+            String line;
+            while ((line=reader.readLine())!=null){
+                String[] userData= line.split(",");
+                String email= userData[1];
+                String username= userData[2];
+                String phone= userData[3];
+                String password= userData[4];
+
+                Log.i("Parametros entrada", user+"-"+pass);
+                Log.i("File", email+"-"+username+"-"+phone+
+                        "-"+password);
+
+                if((email.equals(user)||username.equals(user)||
+                        phone.equals(user))&& password.equals(pass)){
+                    Log.i("Check", "True");
+                    return true;
                 }
             }
-
-            bufferedReader.close();
-        } catch (Exception e) {
+        }catch (Exception e){
             e.printStackTrace();
         }
-        return false; // No se encontró coincidencia en el archivo
+        return false;
+
     }
 }

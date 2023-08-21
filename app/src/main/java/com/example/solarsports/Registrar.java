@@ -59,16 +59,14 @@ public class Registrar extends AppCompatActivity {
                         !editTextUsuario.getText().toString().isEmpty() &&
                         !editTextTextPassword.getText().toString().isEmpty() &&
                         !editTextTextPassword2.getText().toString().isEmpty()
-
-
                 ) {
 
-                    //Validar que el usuario no exista
-                    //Validar que el username este disponible
-
-                    //Validar que la contraseña actual y la nueva sean la misma
-
                     if (editTextTextPassword.getText().toString().equals(editTextTextPassword2.getText().toString())) {
+
+                        if (checkUser(editEmail.getText().toString(),
+                                editTextUsuario.getText().toString())){
+                            Toast.makeText(getApplicationContext(),"Este usuario ya esta registrado",Toast.LENGTH_LONG).show();
+                        }else{
                         User user = new User(editTextNombre.getText().toString(), editEmail.getText().toString(),
                                 editTextTelefono.getText().toString(),
                                 editTextUsuario.getText().toString(),
@@ -76,48 +74,23 @@ public class Registrar extends AppCompatActivity {
                                 editTextTextPassword2.getText().toString()
                         );
                         saveUser(user);
+                        Toast.makeText(Registrar.this, "Registrado", Toast.LENGTH_LONG).show();
                         startActivity(backView);
-
+                        }
                     } else {
                         Toast.makeText(Registrar.this, "Valide que las contraseñas sean iguales", Toast.LENGTH_LONG).show();
+
                     }
-                    //Almacenar en txt
-                    File file = new File(getFilesDir(), "Registrar.txt");
-                    try {
-                        FileWriter writer = new FileWriter(file, true);
-                        BufferedWriter bufferedWriter = new BufferedWriter(writer);
-                        String registro =
-                                editTextNombre.getText().toString() + "," +
-                                        editEmail.getText().toString() + "," +
-                                        editTextTelefono.getText().toString() + "," +
-                                        editTextUsuario.getText().toString() + "," +
-                                        editTextTextPassword.getText().toString() + "," +
-                                        editTextTextPassword2.getText().toString();
+                }else{
+                            Toast.makeText(getApplicationContext(),"Valide que los campos no esten vacios",Toast.LENGTH_LONG).show();
+                        }
 
 
-                        bufferedWriter.write(registro);
-                        bufferedWriter.newLine();
-                        bufferedWriter.close();
 
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                    editTextNombre.setText("");
-                    editEmail.setText("");
-                    editTextTelefono.setText("");
-                    editTextUsuario.setText("");
-                    editTextTextPassword.setText("");
-                    editTextTextPassword2.setText("");
-                    Toast.makeText(Registrar.this, "Registrado", Toast.LENGTH_LONG).show();
-                    startActivity(backView);
-
-                } else {
-                    Toast.makeText(Registrar.this, "Valide que los campos no esten vacios", Toast.LENGTH_LONG).show();
-                    startActivity(registrarView);
-                }
 
             }
         });
+
 
         ImageViewBack.setOnClickListener(new View.OnClickListener() {
 
@@ -138,38 +111,43 @@ public class Registrar extends AppCompatActivity {
 
     }
 
+
     public void saveUser(User user) {
         File file = new File(getFilesDir(), "userData.txt");
         try {
             FileWriter writer = new FileWriter(file, true);
             BufferedWriter bufferedWriter = new BufferedWriter(writer);
-            bufferedWriter.write(user.getName() + "," + user.getEmail() + "," + user.getUsername() + "," + user.getPhone() + "," + user.getPassword());
+            bufferedWriter.write(user.getName() + "," + user.getEmail() + "," + user.getUsername() + "," + user.getPhone() + "," + user.getPassword()+ "," + user.getPassword2());
+            bufferedWriter.newLine();
             bufferedWriter.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public boolean checkUser(User user) {
-        File file = new File(getFilesDir(), "userData.txt");
-        try {
-            FileReader reader   = new FileReader(file);
-            BufferedReader bufferedReader = new BufferedReader(reader);
-            String line;
-            List<String> emailList = new ArrayList<String>();
-            List<String> usernameList = new ArrayList<String>();
+        public boolean checkUser(String email, String username){
+            File file= new File(getFilesDir(),"userData.txt");
+            try {
+                FileReader reader= new FileReader(file);
+                BufferedReader bufferedReader= new BufferedReader(reader);
+                String line;
+                List<String> emailList= new ArrayList<>();
+                List<String> usernameList= new ArrayList<>();
 
-            while ((line=bufferedReader.readLine()) != null){
-                String [] data = line.split(",");
-                emailList.add(data[1]);
-                usernameList.add(data[2]);
+                while ((line=bufferedReader.readLine())!=null){
+                    String [] data= line.split(",");
+                    emailList.add(data[1]);
+                    usernameList.add(data[2]);
+                }
+                bufferedReader.close();
 
+                return emailList.contains(email) ||
+                        usernameList.contains(username);
+
+            }catch (Exception e){
+                e.printStackTrace();
             }
-            bufferedReader.close();
-            return emailList.contains(user.getEmail()) || usernameList.contains(user.getUsername());
-        }catch (Exception e){
-            e.printStackTrace();
+
+            return false;
         }
-        return false;
-    }
 }

@@ -10,9 +10,15 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.solarsports.models.UserSession;
+
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ActualizarUsuarioActivity extends AppCompatActivity {
 
@@ -20,7 +26,7 @@ public class ActualizarUsuarioActivity extends AppCompatActivity {
     ImageView ImageViewExit;
     Button Actualizar;
 
-    EditText editTextNombre ,editTextEmail , editTextTelefono ,editTextUsuario,editTextContrasena ,editTextConfirmarC ;
+    EditText editTextNombre ,editTextEmail , editTextTelefono ,editTextUsuario ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,66 +40,44 @@ public class ActualizarUsuarioActivity extends AppCompatActivity {
         editTextEmail = findViewById(R.id.editTextEmail);
         editTextTelefono= findViewById(R.id.editTextTelefono);
         editTextUsuario= findViewById(R.id.editTextUsuario);
-        editTextContrasena= findViewById(R.id.editTextContrasena);
-        editTextConfirmarC= findViewById(R.id.editTextConfirmarC);
 
         Intent ActualizarView = new Intent(this, ActualizarUsuarioActivity.class);
         Intent backView = new Intent(this, UsuarioActivity.class);
         Intent exitView = new Intent(this, LoginActivity.class);
 
 
+        // Obtener la instancia de UserSession
+        UserSession userSession = UserSession.getInstance();
+
+        // Obtener los datos del usuario
+        String username = userSession.getUsername();
+        String email = userSession.getEmail();
+
+        cargarDatosUsuario(username);
+
         Actualizar.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                //Verificar vacios los campos
+                // Verificar campos no vacíos
                 if (!editTextNombre.getText().toString().isEmpty() &&
                         !editTextEmail.getText().toString().isEmpty() &&
-                        !editTextTelefono.getText().toString().isEmpty()&&
-                        !editTextUsuario.getText().toString().isEmpty()&&
-                        !editTextContrasena.getText().toString().isEmpty()&&
-                        !editTextConfirmarC.getText().toString().isEmpty()
+                        !editTextTelefono.getText().toString().isEmpty() &&
+                        !editTextUsuario.getText().toString().isEmpty()) {
 
+                    // Actualizar la información en el archivo userData.txt
+                    actualizarDatosUsuario(username,
+                            editTextNombre.getText().toString(),
+                            editTextEmail.getText().toString(),
+                            editTextTelefono.getText().toString(),
+                            editTextUsuario.getText().toString());
 
-                ) {
-                    //Almacenar en txt
-                    File file = new File(getFilesDir(), "Actualizar.txt");
-                    try {
-                        FileWriter writer = new FileWriter(file, true);
-                        BufferedWriter bufferedWriter = new BufferedWriter(writer);
-                        String actualizacion =
-                                editTextNombre.getText().toString() + "," +
-                                        editTextEmail.getText().toString() + "," +
-                                        editTextTelefono.getText().toString()+ "," +
-                                        editTextUsuario.getText().toString()+ "," +
-                                        editTextContrasena.getText().toString()+ "," +
-                                        editTextConfirmarC.getText().toString()
-
-                                ;
-
-
-
-                        bufferedWriter.write(actualizacion);
-                        bufferedWriter.newLine();
-                        bufferedWriter.close();
-
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                    editTextNombre.setText("");
-                    editTextEmail.setText("");
-                    editTextTelefono.setText("");
-                    editTextUsuario.setText("");
-                    editTextContrasena.setText("");
-                    editTextConfirmarC.setText("");
-                    Toast.makeText(ActualizarUsuarioActivity.this, "Registrado", Toast.LENGTH_LONG).show();
+                    // Notificar al usuario y regresar a la vista anterior
+                    Toast.makeText(ActualizarUsuarioActivity.this, "Información actualizada", Toast.LENGTH_LONG).show();
                     startActivity(backView);
-
                 } else {
-                    Toast.makeText(ActualizarUsuarioActivity.this, "Valide que los campos no esten vacios", Toast.LENGTH_LONG).show();
-                    startActivity(ActualizarView);
+                    Toast.makeText(ActualizarUsuarioActivity.this, "Valide que los campos no estén vacíos", Toast.LENGTH_LONG).show();
                 }
-
             }
         });
 
@@ -121,4 +105,53 @@ public class ActualizarUsuarioActivity extends AppCompatActivity {
             }
         });
     }
- }
+    private void cargarDatosUsuario(String usuario) {
+        File file = new File(getFilesDir(), "userData.txt");
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(file));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String[] userData = line.split(",");
+                if (userData.length >= 4 && userData[3].equals(usuario)) {
+                    editTextNombre.setText(userData[0]);
+                    editTextEmail.setText(userData[1]);
+                    editTextTelefono.setText(userData[2]);
+                    editTextUsuario.setText(userData[3]);
+                    // No asignes la contraseña en un campo de edición de texto por seguridad
+                    // Puedes proporcionar un botón para cambiar la contraseña en otro lugar
+                    break; // Terminar el bucle después de encontrar los datos del usuario
+                }
+            }
+            reader.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    private void actualizarDatosUsuario(String username, String nombre, String email, String telefono, String usuario) {
+        List<String> lines = new ArrayList<>();
+        File file = new File(getFilesDir(), "userData.txt");
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(file));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String[] userData = line.split(",");
+                if (userData.length >= 4 && userData[3].equals(username)) {
+                    lines.add(nombre + "," + email + "," + telefono + "," + usuario);
+                } else {
+                    lines.add(line);
+                }
+            }
+            reader.close();
+
+            BufferedWriter writer = new BufferedWriter(new FileWriter(file, false));
+            for (String updatedLine : lines) {
+                writer.write(updatedLine);
+                writer.newLine();
+            }
+            writer.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+
