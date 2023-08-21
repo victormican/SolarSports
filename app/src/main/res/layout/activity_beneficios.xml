@@ -2,7 +2,7 @@
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:background="#F4EB49"
     android:gravity="center_horizontal"
@@ -81,38 +81,35 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="20dp"
-        android:layout_weight="0"
-        android:background="#c9f1fd"
-        android:orientation="vertical"
-        android:paddingLeft="0dp"
-        android:paddingTop="12dp"
-        android:paddingBottom="12dp">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#c9f1fd">
 
         <ImageView
-            android:id="@+id/imageViewNube"
-            android:layout_width="411dp"
-            android:layout_height="104dp"
+            android:id="@+id/imageViewNube2"
+            android:layout_width="697dp"
+            android:layout_height="381dp"
             android:layout_gravity="center"
             android:layout_weight="0"
-            app:srcCompat="@drawable/explosao_quadrinhos_png_1024x1024" />
-
-        <TextView
-            android:id="@+id/textViewConsejos"
-            android:layout_width="match_parent"
-            android:layout_height="94dp"
-            android:layout_weight="0"
-            android:gravity="center_horizontal"
-            android:textColor="#01128E"
-            android:textStyle="bold"
+            app:srcCompat="@drawable/explosao_quadrinhos_png_1024x1024"
             tools:visibility="visible" />
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/textViewConsejos2"
+            android:layout_width="223dp"
+            android:layout_height="79dp"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="70dp"
+            android:layout_weight="0"
+            android:paddingTop="20dp"
+            android:text="Consejos"
+            android:textColor="#01128E"
+            android:textStyle="bold"
+            android:visibility="visible"
+            tools:visibility="visible" />
+    </FrameLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -133,6 +130,13 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             app:srcCompat="@drawable/update_fill0_wght400_grad0_opsz48" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cambiar" />
     </LinearLayout>
 
     <LinearLayout

@@ -34,7 +34,7 @@ public class Beneficios extends AppCompatActivity {
     ImageView category;
     ImageView userProfile;
     ImageView stadistics;
-    ImageView benefits, imageViewNew;
+    ImageView benefits, imageViewNew , imageViewNube2;
 
     List<String> adviceList = new ArrayList<>();
     int currentAdviceIndex = 0;
@@ -53,12 +53,12 @@ public class Beneficios extends AppCompatActivity {
         stadistics = findViewById(R.id.imageViewStadisticsIcon);
         benefits = findViewById(R.id.imageViewBenefitsIcon);
         imageViewNew = findViewById(R.id.imageViewNew);
-
+        imageViewNube2= findViewById(R.id.imageViewNube2);
         imageVBeneficios= findViewById(R.id.imageViewBeneficios);
 
          textVBeneficios= findViewById(R.id.textViewBBeneficios);
 
-         textViewConsejos= findViewById(R.id.textViewConsejos);
+         textViewConsejos= findViewById(R.id.textViewConsejos2);
 
 
         Intent exitView = new Intent(this, LoginActivity.class);
@@ -89,7 +89,13 @@ public class Beneficios extends AppCompatActivity {
 
         //List<String> adviceList = readAdviceFromAssets("Beneficios.txt");
 
-
+        imageViewNube2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                updateAdvice();
+                Toast.makeText(Beneficios.this ,"Nuevo consejo",Toast.LENGTH_LONG).show();
+            }
+        });
         ImageViewExit.setOnClickListener(new View.OnClickListener() {
 
             @Override
