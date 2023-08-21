@@ -2,6 +2,7 @@
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/edit"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="#F4EB49"
@@ -90,20 +91,20 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textViewNombre_Cancha"
+            android:id="@+id/textViewNombreCancha"
             android:layout_width="118dp"
             android:layout_height="wrap_content"
             android:layout_weight="0"
             android:paddingTop="0dp"
-            android:text="Nombre_Cancha:" />
+            android:text="Nombre Cancha:" />
 
         <EditText
-            android:id="@+id/editTextNombre_Cancha"
+            android:id="@+id/editTextNombreCancha"
             android:layout_width="wrap_content"
             android:layout_height="45dp"
             android:layout_weight="0"
             android:ems="25"
-            android:hint="Nombre_Cancha"
+            android:hint="Nombre Cancha"
             android:inputType="text" />
 
     </LinearLayout>
@@ -117,20 +118,20 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textViewNombre_Terraza"
+            android:id="@+id/textViewNombreTerraza"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:layout_weight="0"
             android:paddingTop="0dp"
-            android:text="Nombre_Terraza:" />
+            android:text="Nombre Terraza:" />
 
         <EditText
-            android:id="@+id/editTextNombre_Terraza"
+            android:id="@+id/editTextNombreTerraza"
             android:layout_width="wrap_content"
             android:layout_height="45dp"
             android:layout_weight="0"
             android:ems="25"
-            android:hint="Nombre_Terraza"
+            android:hint="Nombre Terraza"
             android:inputType="text" />
 
     </LinearLayout>

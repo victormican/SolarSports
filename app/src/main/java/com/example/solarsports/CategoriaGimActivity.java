@@ -6,8 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 
 public class CategoriaGimActivity extends AppCompatActivity {
     ImageView exit;
@@ -25,6 +31,8 @@ public class CategoriaGimActivity extends AppCompatActivity {
 
     Button registrar;
     ImageView back ;
+
+    EditText editTextNombreGim, editTextNombreTerraza , editTextLongitud ,editTextAncho , editTextPotencia ,editTextHoras , editTextMes ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +52,14 @@ public class CategoriaGimActivity extends AppCompatActivity {
 
         tVCategoryG = findViewById(R.id.textViewGimnasios);
         iVCategoryG = findViewById(R.id.imageViewRRGimnasios);
+
+        editTextNombreGim= findViewById(R.id.editTextNombreGim);
+        editTextNombreTerraza = findViewById(R.id.editTextNombreTerraza);
+        editTextLongitud = findViewById(R.id.editTextLongitud);
+        editTextAncho = findViewById(R.id.editTextAncho);
+        editTextPotencia = findViewById(R.id.editTextPotencia);
+        editTextHoras = findViewById(R.id.editTextHoras);
+        editTextMes = findViewById(R.id.editTextMes);
 
         Intent registrarView = new Intent(this, Categorias.class);
 
@@ -69,11 +85,57 @@ public class CategoriaGimActivity extends AppCompatActivity {
 
 
         registrar.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
-                startActivity(registrarView);
-            }
+                //Verificar vacios los campos
+                if(!editTextNombreGim.getText().toString().isEmpty() &&
+                        !editTextNombreTerraza.getText().toString().isEmpty()  &&
+                        !editTextLongitud.getText().toString().isEmpty()  &&
+                        !editTextAncho.getText().toString().isEmpty()    &&
+                        !editTextPotencia.getText().toString().isEmpty()    &&
+                        !editTextHoras.getText().toString().isEmpty()      &&
+                        !editTextMes.getText().toString().isEmpty()
+                )
+                {
+                    //Almacenar en txt
+                    File file = new File(getFilesDir(),"PanelGim.xt");
+                    try {
+                        FileWriter writer = new FileWriter(file,true);
+                        BufferedWriter bufferedWriter = new BufferedWriter(writer);
+                        String canchas =
+                                editTextNombreGim.getText().toString()+","+
+                                        editTextNombreTerraza.getText().toString()+","+
+                                        editTextLongitud.getText().toString()+","+
+                                        editTextAncho.getText().toString()+","+
+                                        editTextPotencia.getText().toString()+","+
+                                        editTextHoras.getText().toString()+","+
+                                        editTextMes.getText().toString();
 
+
+
+                        bufferedWriter.write(canchas);
+                        bufferedWriter.newLine();
+                        bufferedWriter.close();
+
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+                editTextNombreGim.setText("");
+                editTextNombreTerraza.setText("");
+                editTextLongitud.setText("");
+                editTextAncho.setText("");
+                editTextPotencia.setText("");
+                editTextHoras.setText("");
+                editTextMes.setText("");
+                Toast.makeText(CategoriaGimActivity.this ,"Exitoso",Toast.LENGTH_LONG).show();
+                startActivity(CategoryView);
+
+            }else{
+                Toast.makeText(CategoriaGimActivity.this ,"Valide que los campos no esten vacios",Toast.LENGTH_LONG).show();
+                startActivity(CategoryGimView);
+            }
+        }
 
         });
 
