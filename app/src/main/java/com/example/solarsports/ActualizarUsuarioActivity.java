@@ -26,7 +26,7 @@ public class ActualizarUsuarioActivity extends AppCompatActivity {
     ImageView ImageViewExit;
     Button Actualizar;
 
-    EditText editTextNombre ,editTextEmail , editTextTelefono ,editTextUsuario ;
+    EditText editTextNombre, editTextEmail, editTextTelefono, editTextUsuario, editTextAContrasena, editTextAConfirmarC;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +38,8 @@ public class ActualizarUsuarioActivity extends AppCompatActivity {
         ImageViewExit = findViewById(R.id.imageViewExit);
         editTextNombre = findViewById(R.id.editTextNombre);
         editTextEmail = findViewById(R.id.editTextEmail);
-        editTextTelefono= findViewById(R.id.editTextTelefono);
-        editTextUsuario= findViewById(R.id.editTextUsuario);
+        editTextTelefono = findViewById(R.id.editTextTelefono);
+        editTextUsuario = findViewById(R.id.editTextUsuario);
 
         Intent ActualizarView = new Intent(this, ActualizarUsuarioActivity.class);
         Intent backView = new Intent(this, UsuarioActivity.class);
@@ -70,7 +70,8 @@ public class ActualizarUsuarioActivity extends AppCompatActivity {
                             editTextNombre.getText().toString(),
                             editTextEmail.getText().toString(),
                             editTextTelefono.getText().toString(),
-                            editTextUsuario.getText().toString());
+                            editTextUsuario.getText().toString()
+                    );
 
                     // Notificar al usuario y regresar a la vista anterior
                     Toast.makeText(ActualizarUsuarioActivity.this, "Información actualizada", Toast.LENGTH_LONG).show();
@@ -105,6 +106,7 @@ public class ActualizarUsuarioActivity extends AppCompatActivity {
             }
         });
     }
+
     private void cargarDatosUsuario(String usuario) {
         File file = new File(getFilesDir(), "userData.txt");
         try {
@@ -127,7 +129,10 @@ public class ActualizarUsuarioActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-    private void actualizarDatosUsuario(String username, String nombre, String email, String telefono, String usuario) {
+    // ...
+
+    private void actualizarDatosUsuario(String username, String nombre,
+                                        String email, String telefono, String usuario) {
         List<String> lines = new ArrayList<>();
         File file = new File(getFilesDir(), "userData.txt");
         try {
@@ -136,7 +141,7 @@ public class ActualizarUsuarioActivity extends AppCompatActivity {
             while ((line = reader.readLine()) != null) {
                 String[] userData = line.split(",");
                 if (userData.length >= 4 && userData[3].equals(username)) {
-                    lines.add(nombre + "," + email + "," + telefono + "," + usuario);
+                    lines.add(nombre + "," + email + "," + telefono + "," + usuario + "," + userData[4] + "," + userData[5]);
                 } else {
                     lines.add(line);
                 }
@@ -149,9 +154,18 @@ public class ActualizarUsuarioActivity extends AppCompatActivity {
                 writer.newLine();
             }
             writer.close();
+
+            // Actualizar los valores en UserSession
+            UserSession userSession = UserSession.getInstance();
+            userSession.setUsername(usuario);
+            userSession.setEmail(email);
+            userSession.setPhoneNumber(telefono);
+            userSession.setName(nombre);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 }
+
+
 
