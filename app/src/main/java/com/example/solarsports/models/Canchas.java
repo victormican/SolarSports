@@ -7,6 +7,45 @@ public class Canchas {
 
     float consumo;
     String mes;
+    String usuario;
+
+    public Canchas(String nombrecancha, float preciokw, float consumo, String mes, String usuario, String categoria) {
+        this.nombrecancha = nombrecancha;
+        this.preciokw = preciokw;
+        this.consumo = consumo;
+        this.mes = mes;
+        this.usuario = usuario;
+        this.categoria = categoria;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
+    String  categoria;
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+
+
+    public Canchas(String nombrecancha, float preciokw, float consumo, String mes, String usuario) {
+        this.nombrecancha = nombrecancha;
+        this.preciokw = preciokw;
+        this.consumo = consumo;
+        this.mes = mes;
+        this.usuario = usuario;
+    }
+
+
 
 
     public String getNombrecancha() {
@@ -42,11 +81,11 @@ public class Canchas {
     }
 
 
-    public Canchas(String nombrecancha, float preciokw, float consumo, String mes) {
-        this.nombrecancha = nombrecancha;
-        this.preciokw = preciokw;
+    public Canchas(float consumo, float preciokw, String mes, String usuario) {
         this.consumo = consumo;
+        this.preciokw = preciokw;
         this.mes = mes;
+        this.usuario = usuario;
     }
 
     public Canchas(float preciokw, float consumo, String mes) {

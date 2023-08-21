@@ -11,6 +11,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.solarsports.models.UserSession;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -129,45 +131,50 @@ public class RegistroGim extends AppCompatActivity {
             }
         });
 
-        registrar.setOnClickListener(new View.OnClickListener() {
-
+         registrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Verificar vacios los campos
-                if(!editTextNombreGim.getText().toString().isEmpty() &&
-                        !editTextConsumoKW.getText().toString().isEmpty()  &&
-                        !editTextValorKW.getText().toString().isEmpty()  &&
-                        !editTextMes.getText().toString().isEmpty())
-                {
-                    //Almacenar en txt
-                    File file = new File(getFilesDir(),"GimRegistros.txt");
+                // Verificar campos vacíos
+                if (!editTextNombreGim.getText().toString().isEmpty() &&
+                        !editTextConsumoKW.getText().toString().isEmpty() &&
+                        !editTextValorKW.getText().toString().isEmpty() &&
+                        !editTextMes.getText().toString().isEmpty()) {
+
+                    // Obtener el nombre de usuario actual
+                    UserSession userSession = UserSession.getInstance();
+                    String username = userSession.getUsername();
+
+                    // Almacenar en el archivo
+                    File file = new File(getFilesDir(), "GimRegistros.txt");
                     try {
-                        FileWriter writer = new FileWriter(file,true);
+                        FileWriter writer = new FileWriter(file, true);
                         BufferedWriter bufferedWriter = new BufferedWriter(writer);
-                        String registrocancha =
-                                editTextNombreGim.getText().toString()+","+
-                                        editTextConsumoKW.getText().toString()+","+
-                                        editTextValorKW.getText().toString()+","+
-                                        editTextMes.getText().toString();
-                        bufferedWriter.write(registrocancha);
+                        String registroGim =
+                                editTextNombreGim.getText().toString() + "," +
+                                        editTextConsumoKW.getText().toString() + "," +
+                                        editTextValorKW.getText().toString() + "," +
+                                        editTextMes.getText().toString() + "," +
+                                        username + "," + "Gimnasios"; // Agregar el nombre de usuario al registro
+                        bufferedWriter.write(registroGim);
                         bufferedWriter.newLine();
                         bufferedWriter.close();
 
-                    }catch (Exception e){
+                        // Limpiar los campos y mostrar mensaje
+                        editTextNombreGim.setText("");
+                        editTextConsumoKW.setText("");
+                        editTextValorKW.setText("");
+                        editTextMes.setText("");
+                        Toast.makeText(RegistroGim.this, "Registrado", Toast.LENGTH_LONG).show();
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
-                    editTextNombreGim.setText("");
-                    editTextConsumoKW.setText("");
-                    editTextValorKW.setText("");
-                    editTextMes.setText("");
-                    Toast.makeText(RegistroGim.this ,"Registrado",Toast.LENGTH_LONG).show();
-
-                }else{
-                    Toast.makeText(RegistroGim.this ,"Valide que los campos no esten vacios",Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(RegistroGim.this, "Valide que los campos no estén vacíos", Toast.LENGTH_LONG).show();
                 }
                 startActivity(registrarView);
             }
         });
+
 
         Back.setOnClickListener(new View.OnClickListener() {
 

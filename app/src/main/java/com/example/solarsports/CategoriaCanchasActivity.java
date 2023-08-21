@@ -11,6 +11,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.solarsports.models.UserSession;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -87,55 +89,58 @@ public class CategoriaCanchasActivity extends AppCompatActivity {
 
 
         registrar.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
-                //Verificar vacios los campos
-                if(!editTextNombreCancha.getText().toString().isEmpty() &&
-                        !editTextNombreTerraza.getText().toString().isEmpty()  &&
-                        !editTextLongitud.getText().toString().isEmpty()  &&
-                        !editTextAncho.getText().toString().isEmpty()    &&
-                        !editTextPotencia.getText().toString().isEmpty()    &&
-                        !editTextHoras.getText().toString().isEmpty()      &&
-                        !editTextMes.getText().toString().isEmpty()
-                )
-                {
-                    //Almacenar en txt
-                    File file = new File(getFilesDir(),"PanelCanchas.txt");
+                // Verificar campos vacíos
+                if (!editTextNombreCancha.getText().toString().isEmpty() &&
+                        !editTextNombreTerraza.getText().toString().isEmpty() &&
+                        !editTextLongitud.getText().toString().isEmpty() &&
+                        !editTextAncho.getText().toString().isEmpty() &&
+                        !editTextPotencia.getText().toString().isEmpty() &&
+                        !editTextHoras.getText().toString().isEmpty() &&
+                        !editTextMes.getText().toString().isEmpty()) {
+
+                    // Obtener el nombre de usuario actual
+                    UserSession userSession = UserSession.getInstance();
+                    String username = userSession.getUsername();
+
+                    // Almacenar en el archivo
+                    File file = new File(getFilesDir(), "PanelCanchas.txt");
                     try {
-                        FileWriter writer = new FileWriter(file,true);
+                        FileWriter writer = new FileWriter(file, true);
                         BufferedWriter bufferedWriter = new BufferedWriter(writer);
                         String canchas =
-                                editTextNombreCancha.getText().toString()+","+
-                                        editTextNombreTerraza.getText().toString()+","+
-                                editTextLongitud.getText().toString()+","+
-                                editTextAncho.getText().toString()+","+
-                                editTextPotencia.getText().toString()+","+
-                                editTextHoras.getText().toString()+","+
-                                editTextMes.getText().toString();
+                                editTextNombreCancha.getText().toString() + "," +
+                                        editTextNombreTerraza.getText().toString() + "," +
+                                        editTextLongitud.getText().toString() + "," +
+                                        editTextAncho.getText().toString() + "," +
+                                        editTextPotencia.getText().toString() + "," +
+                                        editTextHoras.getText().toString() + "," +
+                                        editTextMes.getText().toString() + "," +
+                                        username+"," +"Canchas"  ; // Agregar el nombre de usuario al registro
+
                         bufferedWriter.write(canchas);
                         bufferedWriter.newLine();
                         bufferedWriter.close();
 
-                    }catch (Exception e){
+                        // Limpiar los campos y mostrar mensaje
+                        editTextNombreCancha.setText("");
+                        editTextNombreTerraza.setText("");
+                        editTextLongitud.setText("");
+                        editTextAncho.setText("");
+                        editTextPotencia.setText("");
+                        editTextHoras.setText("");
+                        editTextMes.setText("");
+                        Toast.makeText(CategoriaCanchasActivity.this, "Exitoso", Toast.LENGTH_LONG).show();
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
-                    editTextNombreCancha.setText("");
-                    editTextNombreTerraza.setText("");
-                    editTextLongitud.setText("");
-                    editTextAncho.setText("");
-                    editTextPotencia.setText("");
-                    editTextHoras.setText("");
-                    editTextMes.setText("");
-                    Toast.makeText(CategoriaCanchasActivity.this ,"Exitoso",Toast.LENGTH_LONG).show();
                     startActivity(CategoryView);
-
-                }else{
-                    Toast.makeText(CategoriaCanchasActivity.this ,"Valide que los campos no esten vacios",Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(CategoriaCanchasActivity.this, "Valide que los campos no estén vacíos", Toast.LENGTH_LONG).show();
                     startActivity(CategoryCanchaView);
                 }
             }
-
         });
 
         back.setOnClickListener(new View.OnClickListener() {

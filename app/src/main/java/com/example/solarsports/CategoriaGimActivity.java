@@ -11,6 +11,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.solarsports.models.UserSession;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -98,6 +100,10 @@ public class CategoriaGimActivity extends AppCompatActivity {
                         !editTextMes.getText().toString().isEmpty()
                 )
                 {
+                    // Obtener el nombre de usuario actual
+                    UserSession userSession = UserSession.getInstance();
+                    String username = userSession.getUsername();
+
                     //Almacenar en txt
                     File file = new File(getFilesDir(),"PanelGim.txt");
                     try {
@@ -110,8 +116,8 @@ public class CategoriaGimActivity extends AppCompatActivity {
                                         editTextAncho.getText().toString()+","+
                                         editTextPotencia.getText().toString()+","+
                                         editTextHoras.getText().toString()+","+
-                                        editTextMes.getText().toString();
-
+                                        editTextMes.getText().toString()+","+
+                                        username + "," + "Gimnasios" ; // Agregar el nombre de usuario al registro
 
 
                         bufferedWriter.write(canchas);

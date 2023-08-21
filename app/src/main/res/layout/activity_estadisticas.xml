@@ -111,7 +111,7 @@
 
                 <TextView
                     android:id="@+id/textViewEMes"
-                    android:layout_width="103dp"
+                    android:layout_width="92dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="MES"
@@ -121,7 +121,7 @@
 
                 <TextView
                     android:id="@+id/textViewPROMEDIO"
-                    android:layout_width="120dp"
+                    android:layout_width="104dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="PROMEDIO ENERGIA"
@@ -141,7 +141,7 @@
 
                 <TextView
                     android:id="@+id/textViewAhorro"
-                    android:layout_width="68dp"
+                    android:layout_width="88dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="AHORRO"

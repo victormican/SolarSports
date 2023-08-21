@@ -11,6 +11,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.solarsports.models.UserSession;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -139,47 +141,50 @@ public class RegistroCanchas extends AppCompatActivity {
         });
 
         registrar.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
-                //Verificar vacios los campos
-                if(!editTextNombreCancha.getText().toString().isEmpty() &&
-                        !editTextConsumoKW.getText().toString().isEmpty()  &&
-                        !editTextValorKW.getText().toString().isEmpty()  &&
-                        !editTextMes.getText().toString().isEmpty())
-                 {
-                     //Almacenar en txt
-                     File file = new File(getFilesDir(),"CanchasRegistros.txt");
-                     System.out.println(file);
-                     try {
-                         FileWriter writer = new FileWriter(file,true);
-                         BufferedWriter bufferedWriter = new BufferedWriter(writer);
-                         String registrocancha =
-                                 editTextNombreCancha.getText().toString()+","+
-                                 editTextConsumoKW.getText().toString()+","+
-                         editTextValorKW.getText().toString()+","+
-                         editTextMes.getText().toString();
-                         bufferedWriter.write(registrocancha);
-                         bufferedWriter.newLine();
-                         bufferedWriter.close();
+                // Verificar campos vacíos
+                if (!editTextNombreCancha.getText().toString().isEmpty() &&
+                        !editTextConsumoKW.getText().toString().isEmpty() &&
+                        !editTextValorKW.getText().toString().isEmpty() &&
+                        !editTextMes.getText().toString().isEmpty()) {
 
-                     }catch (Exception e){
-                         e.printStackTrace();
-                     }
-                     editTextNombreCancha.setText("");
-                     editTextConsumoKW.setText("");
-                     editTextValorKW.setText("");
-                     editTextMes.setText("");
-                     Toast.makeText(RegistroCanchas.this ,"Registrado",Toast.LENGTH_LONG).show();
-                     startActivity(registrarView);
+                    // Obtener el nombre de usuario actual
+                    UserSession userSession = UserSession.getInstance();
+                    String username = userSession.getUsername();
 
-                }else{
-                    Toast.makeText(RegistroCanchas.this ,"Valide que los campos no esten vacios",Toast.LENGTH_LONG).show();
+                    // Almacenar en el archivo
+                    File file = new File(getFilesDir(), "CanchasRegistros.txt");
+                    try {
+                        FileWriter writer = new FileWriter(file, true);
+                        BufferedWriter bufferedWriter = new BufferedWriter(writer);
+                        String registroCancha =
+                                editTextNombreCancha.getText().toString() + "," +
+                                        editTextConsumoKW.getText().toString() + "," +
+                                        editTextValorKW.getText().toString() + "," +
+                                        editTextMes.getText().toString() + "," +
+                                        username + "," + "Canchas" ; // Agregar el nombre de usuario al registro
+                        bufferedWriter.write(registroCancha);
+                        bufferedWriter.newLine();
+                        bufferedWriter.close();
+
+                        // Limpiar los campos y mostrar mensaje
+                        editTextNombreCancha.setText("");
+                        editTextConsumoKW.setText("");
+                        editTextValorKW.setText("");
+                        editTextMes.setText("");
+                        Toast.makeText(RegistroCanchas.this, "Registrado", Toast.LENGTH_LONG).show();
+                        startActivity(registrarView);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                } else {
+                    Toast.makeText(RegistroCanchas.this, "Valide que los campos no estén vacíos", Toast.LENGTH_LONG).show();
                     startActivity(RegistrCanchaView);
                 }
-
             }
         });
+
 
         ImageViewBack.setOnClickListener(new View.OnClickListener() {
 

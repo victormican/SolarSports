@@ -7,6 +7,47 @@ public class Gimnasios {
     float consumo;
     String mes;
 
+    String usuario;
+
+    String categoria;
+
+    public Gimnasios(String nombregim, float valorkw, float consumo, String mes, String usuario, String categoria) {
+        this.nombregim = nombregim;
+        this.valorkw = valorkw;
+        this.consumo = consumo;
+        this.mes = mes;
+        this.usuario = usuario;
+        this.categoria = categoria;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
+
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+
+
+    public Gimnasios(String nombregim, float valorkw, float consumo, String mes, String usuario) {
+        this.nombregim = nombregim;
+        this.valorkw = valorkw;
+        this.consumo = consumo;
+        this.mes = mes;
+        this.usuario = usuario;
+    }
+
 
     public String getNombregim() {
         return nombregim;

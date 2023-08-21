@@ -167,22 +167,26 @@ public class Estadisticas extends AppCompatActivity {
 
     private List<Gimnasios> readFileGim(File gimRegistrosFile) {
         List<Gimnasios> gimList = new ArrayList<>();
-        try (BufferedReader br= new BufferedReader(new FileReader(gimRegistrosFile))){
+        try (BufferedReader br = new BufferedReader(new FileReader(gimRegistrosFile))) {
             String line;
-            while ((line= br.readLine()) != null){
-                String[] data= line.split(",");
-                String nombregim= data[0];
-                float consumoKw= Float.parseFloat(data[1]);
-                float valorkW= Float.parseFloat(data[2]);
-                String mes= data[3];
-                Gimnasios gimObj= new Gimnasios(nombregim , consumoKw,valorkW,mes);
+            while ((line = br.readLine()) != null) {
+                String[] data = line.split(",");
+                String nombregim = data[0];
+                float consumoKw = Float.parseFloat(data[1]);
+                float valorkW = Float.parseFloat(data[2]);
+                String mes = data[3];
+                String usuario = data[4];
+                String categoria = data[5];
+                // Obtener el nombre de usuario
+                Gimnasios gimObj = new Gimnasios(nombregim, consumoKw, valorkW, mes, usuario , categoria); // Pasa el nombre de usuario al constructor
                 gimList.add(gimObj);
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return gimList;
     }
+
 
     private void addGimData(List<Gimnasios> GimList) {
 
@@ -204,7 +208,7 @@ public class Estadisticas extends AppCompatActivity {
             cell2.setBackgroundResource(R.color.white);
 
             TextView cell3= new TextView(this);
-            cell3.setText("Gimnasios");
+            cell3.setText(i.getCategoria());
             cell3.setWidth(90);
             cell3.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
 
@@ -233,10 +237,13 @@ public class Estadisticas extends AppCompatActivity {
             String line;
             while ((line = br.readLine()) != null) {
                 String[] data = line.split(",");
+                String nombrecancha = data[0];
                 float consumo = Float.parseFloat(data[1]);
                 float preciokw = Float.parseFloat(data[2]);
                 String mes = data[3];
-                Canchas CanchasObj = new Canchas(consumo, preciokw, mes);
+                String usuario = data[4];
+                String categoria = data[5];// Obtener el nombre de usuario
+                Canchas CanchasObj = new Canchas(nombrecancha , consumo, preciokw, mes, usuario , categoria); // Pasa el nombre de usuario al constructor
                 canchasList.add(CanchasObj);
             }
         } catch (Exception e) {
@@ -244,6 +251,7 @@ public class Estadisticas extends AppCompatActivity {
         }
         return canchasList;
     }
+
 
 
     private void addCanchaData(List<Canchas> canchasList) {
@@ -265,7 +273,7 @@ public class Estadisticas extends AppCompatActivity {
             cell2.setBackgroundResource(R.color.white);
 
             TextView cell3 = new TextView(this);
-            cell3.setText("Canchas");
+            cell3.setText(i.getCategoria());
             cell3.setWidth(90);
             cell3.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
 
