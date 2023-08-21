@@ -10,8 +10,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 
 public class LoginActivity extends AppCompatActivity {
@@ -55,6 +57,10 @@ public class LoginActivity extends AppCompatActivity {
                         String usuarios =
                                 editTextUser.getText().toString()+","+
                                         editTextPassword.getText().toString();
+
+                        //validar que usuario y contraseña coincidan
+                        //Mostrar mensaje de error con el campo invalido
+
                         bufferedWriter.write(usuarios);
                         bufferedWriter.newLine();
                         bufferedWriter.close();
@@ -90,5 +96,26 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+    }
+    private boolean checkCredentials(String username, String password) {
+        File file = new File(getFilesDir(), "Login.txt");
+        try {
+            FileReader reader = new FileReader(file);
+            BufferedReader bufferedReader = new BufferedReader(reader);
+            String line;
+
+            while ((line = bufferedReader.readLine()) != null) {
+                String[] userData = line.split(",");
+                if (userData.length >= 2 && userData[0].equals(username) && userData[1].equals(password)) {
+                    bufferedReader.close();
+                    return true; // Coinciden las credenciales
+                }
+            }
+
+            bufferedReader.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false; // No se encontró coincidencia en el archivo
     }
 }

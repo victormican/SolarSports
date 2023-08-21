@@ -104,10 +104,14 @@
 
         <TextView
             android:id="@+id/textViewConsejos"
-            android:layout_width="317dp"
+            android:layout_width="match_parent"
             android:layout_height="94dp"
             android:layout_weight="0"
-            android:gravity="center_horizontal" />
+            android:gravity="center_horizontal"
+            android:textColor="#01128E"
+            android:textStyle="bold"
+            tools:visibility="visible" />
+
     </LinearLayout>
 
     <LinearLayout

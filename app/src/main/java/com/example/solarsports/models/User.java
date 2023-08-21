@@ -1,21 +1,14 @@
 package com.example.solarsports.models;
 
 public class User {
-    String name, email,username, phone,password;
+    String name;
+    String email;
+    String username;
 
-    public User(String name, String email, String username, String phone, String password) {
-        this.name = name;
-        this.email = email;
-        this.username = username;
-        this.phone = phone;
-        this.password = password;
-    }
-    public User(String name, String email, String username, String phone) {
-        this.name = name;
-        this.email = email;
-        this.username = username;
-        this.phone = phone;
-    }
+    String phone;
+
+    String password;
+    String password2;
 
     public String getName() {
         return name;
@@ -56,5 +49,26 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public String getPassword2() {
+        return password2;
+    }
+
+    public void setPassword2(String password2) {
+        this.password2 = password2;
+    }
+
+
+    public User(String name, String email, String username, String phone, String password, String password2) {
+        this.name = name;
+        this.email = email;
+        this.username = username;
+        this.phone = phone;
+        this.password = password;
+        this.password2 = password2;
+    }
+
+
+
 
 }

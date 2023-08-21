@@ -10,9 +10,15 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.solarsports.models.User;
+
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Registrar extends AppCompatActivity {
 
@@ -49,13 +55,32 @@ public class Registrar extends AppCompatActivity {
                 //Verificar vacios los campos
                 if (!editTextNombre.getText().toString().isEmpty() &&
                         !editEmail.getText().toString().isEmpty() &&
-                        !editTextTelefono.getText().toString().isEmpty()&&
-                        !editTextUsuario.getText().toString().isEmpty()&&
-                        !editTextTextPassword.getText().toString().isEmpty()&&
+                        !editTextTelefono.getText().toString().isEmpty() &&
+                        !editTextUsuario.getText().toString().isEmpty() &&
+                        !editTextTextPassword.getText().toString().isEmpty() &&
                         !editTextTextPassword2.getText().toString().isEmpty()
 
 
                 ) {
+
+                    //Validar que el usuario no exista
+                    //Validar que el username este disponible
+
+                    //Validar que la contraseña actual y la nueva sean la misma
+
+                    if (editTextTextPassword.getText().toString().equals(editTextTextPassword2.getText().toString())) {
+                        User user = new User(editTextNombre.getText().toString(), editEmail.getText().toString(),
+                                editTextTelefono.getText().toString(),
+                                editTextUsuario.getText().toString(),
+                                editTextTextPassword.getText().toString(),
+                                editTextTextPassword2.getText().toString()
+                        );
+                        saveUser(user);
+                        startActivity(backView);
+
+                    } else {
+                        Toast.makeText(Registrar.this, "Valide que las contraseñas sean iguales", Toast.LENGTH_LONG).show();
+                    }
                     //Almacenar en txt
                     File file = new File(getFilesDir(), "Registrar.txt");
                     try {
@@ -64,13 +89,10 @@ public class Registrar extends AppCompatActivity {
                         String registro =
                                 editTextNombre.getText().toString() + "," +
                                         editEmail.getText().toString() + "," +
-                                        editTextTelefono.getText().toString()+ "," +
-                                        editTextUsuario.getText().toString()+ "," +
-                                        editTextTextPassword.getText().toString()+ "," +
-                                        editTextTextPassword2.getText().toString()
-
-                                ;
-
+                                        editTextTelefono.getText().toString() + "," +
+                                        editTextUsuario.getText().toString() + "," +
+                                        editTextTextPassword.getText().toString() + "," +
+                                        editTextTextPassword2.getText().toString();
 
 
                         bufferedWriter.write(registro);
@@ -112,6 +134,42 @@ public class Registrar extends AppCompatActivity {
                 startActivity(exitView);
             }
         });
+
+
     }
 
+    public void saveUser(User user) {
+        File file = new File(getFilesDir(), "userData.txt");
+        try {
+            FileWriter writer = new FileWriter(file, true);
+            BufferedWriter bufferedWriter = new BufferedWriter(writer);
+            bufferedWriter.write(user.getName() + "," + user.getEmail() + "," + user.getUsername() + "," + user.getPhone() + "," + user.getPassword());
+            bufferedWriter.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public boolean checkUser(User user) {
+        File file = new File(getFilesDir(), "userData.txt");
+        try {
+            FileReader reader   = new FileReader(file);
+            BufferedReader bufferedReader = new BufferedReader(reader);
+            String line;
+            List<String> emailList = new ArrayList<String>();
+            List<String> usernameList = new ArrayList<String>();
+
+            while ((line=bufferedReader.readLine()) != null){
+                String [] data = line.split(",");
+                emailList.add(data[1]);
+                usernameList.add(data[2]);
+
+            }
+            bufferedReader.close();
+            return emailList.contains(user.getEmail()) || usernameList.contains(user.getUsername());
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return false;
+    }
 }
