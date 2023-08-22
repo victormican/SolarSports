@@ -67,7 +67,7 @@
 
         <TextView
             android:id="@+id/textViewBuscar"
-            android:layout_width="186dp"
+            android:layout_width="258dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:paddingLeft="30dp"
@@ -103,8 +103,8 @@
         <EditText
             android:id="@+id/editTextSearch"
             android:layout_width="271dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
             android:ems="10"
             android:hint="Busqueda"
             android:inputType="text" />
@@ -132,15 +132,7 @@
         android:orientation="horizontal"
         android:paddingLeft="30dp"
         android:paddingTop="12dp"
-        android:paddingBottom="12dp">
-
-        <ListView
-            android:id="@+id/listViewSearch"
-            android:layout_width="275dp"
-            android:layout_height="141dp"
-            android:layout_weight="0" />
-
-    </LinearLayout>
+        android:paddingBottom="12dp"/>
 
     <LinearLayout
         android:layout_width="wrap_content"

@@ -36,6 +36,10 @@ public class Buscar extends AppCompatActivity {
         stadistics = findViewById(R.id.imageViewStadisticsIcon);
         benefits = findViewById(R.id.imageViewBenefitsIcon);
 
+         imageVBuscar= findViewById(R.id.imageViewBuscar);
+
+        textVBuscar= findViewById(R.id.textViewBuscar);
+
         Intent exitView = new Intent(this, LoginActivity.class);
 
         Intent CategoryView = new Intent(this, Categorias.class);
@@ -51,7 +55,23 @@ public class Buscar extends AppCompatActivity {
         Intent searchView = new Intent(this, Buscar.class);
 
         Intent userProfileView = new Intent(this, UsuarioActivity.class);
-        ImageViewExit.setOnClickListener(new View.OnClickListener() {
+
+        imageVBuscar.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                startActivity(searchView);
+            }
+        });
+
+        textVBuscar.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                startActivity(searchView);
+            }
+        });
+                ImageViewExit.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
