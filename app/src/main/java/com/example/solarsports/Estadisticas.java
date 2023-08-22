@@ -79,13 +79,13 @@ public class Estadisticas extends AppCompatActivity {
         Intent userProfileView = new Intent(this, UsuarioActivity.class);
 
         //Cargar datos de los txt (Files)
-        File CanchasRegistrosFile = new File(getFilesDir(), "CanchasRegistros.txt");
+        File CanchasRegistrosFile = new File(getFilesDir(), "Registros.txt");
 
         List<Canchas> canchasList = readFile(CanchasRegistrosFile);
 
         addCanchaData(canchasList);
 
-        File GimRegistrosFile = new File(getFilesDir(), "GimRegistros.txt");
+        File GimRegistrosFile = new File(getFilesDir(), "Registros.txt");
 
         List<Gimnasios> GimList = readFileGim(GimRegistrosFile);
         addGimData(GimList);

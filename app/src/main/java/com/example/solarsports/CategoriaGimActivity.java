@@ -105,7 +105,7 @@ public class CategoriaGimActivity extends AppCompatActivity {
                     String username = userSession.getUsername();
 
                     //Almacenar en txt
-                    File file = new File(getFilesDir(),"PanelGim.txt");
+                    File file = new File(getFilesDir(),"Paneles.txt");
                     try {
                         FileWriter writer = new FileWriter(file,true);
                         BufferedWriter bufferedWriter = new BufferedWriter(writer);

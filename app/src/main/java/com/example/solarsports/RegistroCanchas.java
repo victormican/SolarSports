@@ -154,7 +154,7 @@ public class RegistroCanchas extends AppCompatActivity {
                     String username = userSession.getUsername();
 
                     // Almacenar en el archivo
-                    File file = new File(getFilesDir(), "CanchasRegistros.txt");
+                    File file = new File(getFilesDir(), "Registros.txt");
                     try {
                         FileWriter writer = new FileWriter(file, true);
                         BufferedWriter bufferedWriter = new BufferedWriter(writer);

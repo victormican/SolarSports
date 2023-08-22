@@ -145,7 +145,7 @@ public class RegistroGim extends AppCompatActivity {
                     String username = userSession.getUsername();
 
                     // Almacenar en el archivo
-                    File file = new File(getFilesDir(), "GimRegistros.txt");
+                    File file = new File(getFilesDir(), "Registros.txt");
                     try {
                         FileWriter writer = new FileWriter(file, true);
                         BufferedWriter bufferedWriter = new BufferedWriter(writer);

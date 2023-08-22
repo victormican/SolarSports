@@ -105,7 +105,7 @@ public class CategoriaCanchasActivity extends AppCompatActivity {
                     String username = userSession.getUsername();
 
                     // Almacenar en el archivo
-                    File file = new File(getFilesDir(), "PanelCanchas.txt");
+                    File file = new File(getFilesDir(), "Paneles.txt");
                     try {
                         FileWriter writer = new FileWriter(file, true);
                         BufferedWriter bufferedWriter = new BufferedWriter(writer);
