@@ -112,8 +112,8 @@
         android:layout_marginEnd="30dp"
         android:layout_weight="0"
         android:orientation="horizontal"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp">
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp">
 
         <TextView
             android:id="@+id/textTelefono"
@@ -142,8 +142,8 @@
         android:layout_marginEnd="30dp"
         android:layout_weight="0"
         android:orientation="horizontal"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp">
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp">
 
         <TextView
             android:id="@+id/textViewUsuario"
@@ -172,8 +172,8 @@
         android:layout_marginEnd="30dp"
         android:layout_weight="0"
         android:orientation="horizontal"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp">
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp">
 
         <TextView
             android:id="@+id/textViewPassword"
@@ -202,8 +202,8 @@
         android:layout_marginEnd="30dp"
         android:layout_weight="0"
         android:orientation="horizontal"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp">
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp">
 
         <TextView
             android:id="@+id/textView121"
@@ -242,7 +242,7 @@
 
         <Button
             android:id="@+id/btnRegistrar"
-            android:layout_width="157dp"
+            android:layout_width="198dp"
             android:layout_height="wrap_content"
             android:layout_weight="0"
             android:backgroundTint="#f7fade"
