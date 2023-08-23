@@ -29,9 +29,7 @@ public class EliminarUsuarioActivity extends AppCompatActivity {
         btnEliminarUser = findViewById(R.id.btnEliminarUser);
         ImageViewBack = findViewById(R.id.imageViewBack);
         ImageViewExit = findViewById(R.id.imageViewExit);
-        editTextNombre = findViewById(R.id.editTextNombre);
         editTextEmail = findViewById(R.id.editTextEmail);
-        editTextTelefono= findViewById(R.id.editTextTelefono);
         editTextUsuario= findViewById(R.id.editTextUsuario);
         editTextContrasena= findViewById(R.id.editTextContrasena);
         editTextConfirmarC= findViewById(R.id.editTextConfirmarC);

@@ -6,8 +6,8 @@ import java.util.*;
 public class Services {
 
     public static void main(String[] args) {
-        List<String[]> registros = readRecordsFromFile("registros.txt");
-        List<String[]> paneles = readRecordsFromFile("paneles.txt");
+        List<String[]> registros = readRecordsFromFile("Registros.txt");
+        List<String[]> paneles = readRecordsFromFile("Paneles.txt");
 
         float averageEnergySavings = calculateAverageEnergySavings(registros);
         float averageMoneySavings = calculateAverageMoneySavings(registros);

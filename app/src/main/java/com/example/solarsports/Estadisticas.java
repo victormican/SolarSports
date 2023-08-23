@@ -10,8 +10,7 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
-import com.example.solarsports.models.Canchas;
-import com.example.solarsports.models.Gimnasios;
+import com.example.solarsports.models.EstadisticasData;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -79,16 +78,11 @@ public class Estadisticas extends AppCompatActivity {
         Intent userProfileView = new Intent(this, UsuarioActivity.class);
 
         //Cargar datos de los txt (Files)
-        File CanchasRegistrosFile = new File(getFilesDir(), "Registros.txt");
+        File RegistrosFile = new File(getFilesDir(), "Registros.txt");
 
-        List<Canchas> canchasList = readFile(CanchasRegistrosFile);
+        List<EstadisticasData> EstadisticasList = ReadEstadisticasData(RegistrosFile);
 
-        addCanchaData(canchasList);
-
-        File GimRegistrosFile = new File(getFilesDir(), "Registros.txt");
-
-        List<Gimnasios> GimList = readFileGim(GimRegistrosFile);
-        addGimData(GimList);
+        addEstadisticasData(EstadisticasList);
 
         home.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -163,9 +157,9 @@ public class Estadisticas extends AppCompatActivity {
 
     }
 
-    private List<Gimnasios> readFileGim(File gimRegistrosFile) {
-        List<Gimnasios> gimList = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader(gimRegistrosFile))) {
+    private List<EstadisticasData> ReadEstadisticasData(File RegistrosFile) {
+        List<EstadisticasData> EstadisticasList = new ArrayList<>();
+        try (BufferedReader br = new BufferedReader(new FileReader(RegistrosFile))) {
             String line;
             while ((line = br.readLine()) != null) {
                 String[] data = line.split(",");
@@ -176,19 +170,19 @@ public class Estadisticas extends AppCompatActivity {
                 String usuario = data[4];
                 String categoria = data[5];
                 // Obtener el nombre de usuario
-                Gimnasios gimObj = new Gimnasios(nombregim, consumoKw, valorkW, mes, usuario , categoria); // Pasa el nombre de usuario al constructor
-                gimList.add(gimObj);
+                EstadisticasData gimObj = new EstadisticasData(nombregim, consumoKw, valorkW, mes, usuario , categoria); // Pasa el nombre de usuario al constructor
+                EstadisticasList.add(gimObj);
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return gimList;
+        return EstadisticasList;
     }
 
 
-    private void addGimData(List<Gimnasios> GimList) {
+    private void addEstadisticasData(List<EstadisticasData> EstadisticasList) {
 
-        for (Gimnasios i:GimList) {
+        for (EstadisticasData i:EstadisticasList) {
             TableRow row= new TableRow(this);
             TextView cell1= new TextView(this);
             cell1.setText(i.getMes());
@@ -214,7 +208,7 @@ public class Estadisticas extends AppCompatActivity {
             cell3.setBackgroundResource(R.color.white);
 
             TextView cell4= new TextView(this);
-            cell4.setText(String.valueOf(i.getValorkw()));
+            cell4.setText(String.valueOf(i.getValorkW()));
             //  cell4.setPadding(10,10,10,10);
             cell4.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
             cell4.setWidth(60);
@@ -229,69 +223,4 @@ public class Estadisticas extends AppCompatActivity {
         }
     }
 
-    private List<Canchas> readFile(File canchasRegistrosFile) {
-        List<Canchas> canchasList = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader(canchasRegistrosFile))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                String[] data = line.split(",");
-                String nombrecancha = data[0];
-                float consumo = Float.parseFloat(data[1]);
-                float preciokw = Float.parseFloat(data[2]);
-                String mes = data[3];
-                String usuario = data[4];
-                String categoria = data[5];// Obtener el nombre de usuario
-                Canchas CanchasObj = new Canchas(nombrecancha , consumo, preciokw, mes, usuario , categoria); // Pasa el nombre de usuario al constructor
-                canchasList.add(CanchasObj);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return canchasList;
-    }
-
-
-
-    private void addCanchaData(List<Canchas> canchasList) {
-        for (Canchas i : canchasList) {
-            TableRow row = new TableRow(this);
-            TextView cell1 = new TextView(this);
-            cell1.setText(i.getMes());
-            cell1.setWidth(80);
-            cell1.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-            //   cell1.setPadding(10,10,10,10);
-            cell1.setBackgroundResource(R.color.white);
-
-            TextView cell2 = new TextView(this);
-            cell2.setText(i.getConsumo() + "");
-            cell2.setWidth(90);
-            cell2.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-
-            //   cell2.setPadding(10,10,10,10);
-            cell2.setBackgroundResource(R.color.white);
-
-            TextView cell3 = new TextView(this);
-            cell3.setText(i.getCategoria());
-            cell3.setWidth(90);
-            cell3.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-
-            //   cell3.setPadding(10,10,10,10);
-            cell3.setBackgroundResource(R.color.white);
-
-            TextView cell4 = new TextView(this);
-            cell4.setText(String.valueOf(i.getPreciokw()));
-            //  cell4.setPadding(10,10,10,10);
-            cell4.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-            cell4.setWidth(60);
-            cell4.setBackgroundResource(R.color.white);
-
-            row.addView(cell1);
-            row.addView(cell2);
-            row.addView(cell3);
-            row.addView(cell4);
-
-
-            tableEstadisticas.addView(row);
-    }
-    }
 }

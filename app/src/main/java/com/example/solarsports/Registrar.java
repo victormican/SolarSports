@@ -23,7 +23,6 @@ import java.util.List;
 public class Registrar extends AppCompatActivity {
 
     ImageView ImageViewBack;
-    ImageView ImageViewExit;
     Button registrar;
 
     EditText editTextNombre, editEmail, editTextTelefono, editTextUsuario, editTextTextPassword, editTextTextPassword2;
@@ -35,7 +34,6 @@ public class Registrar extends AppCompatActivity {
 
         registrar = findViewById(R.id.btnRegistrar);
         ImageViewBack = findViewById(R.id.imageViewBack);
-        ImageViewExit = findViewById(R.id.imageViewExit);
         editTextNombre = findViewById(R.id.editTextNombre);
         editEmail = findViewById(R.id.editEmail);
         editTextTelefono = findViewById(R.id.editTextTelefono);
@@ -100,13 +98,6 @@ public class Registrar extends AppCompatActivity {
             }
         });
 
-        ImageViewExit.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                startActivity(exitView);
-            }
-        });
 
 
     }

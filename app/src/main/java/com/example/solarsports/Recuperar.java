@@ -20,7 +20,6 @@ import java.io.IOException;
 public class Recuperar extends AppCompatActivity {
 
     ImageView ImageViewBack;
-    ImageView ImageViewExit;
     Button recuperar;
 
     EditText editTextUsuario, editTextEmail ,editTextNuevaContrasena , editTextNuevaConfirma;
@@ -30,7 +29,6 @@ public class Recuperar extends AppCompatActivity {
         setContentView(R.layout.activity_recuperar);
         recuperar = findViewById(R.id.btnRecuperar);
         ImageViewBack = findViewById(R.id.imageViewBack);
-        ImageViewExit = findViewById(R.id.imageViewExit);
         editTextUsuario= findViewById(R.id.editTextUsuario);
         editTextEmail= findViewById(R.id.editTextEmail);
          editTextNuevaContrasena = findViewById(R.id.editTextNuevaContrasena);
@@ -114,12 +112,5 @@ public class Recuperar extends AppCompatActivity {
             }
         });
 
-        ImageViewExit.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                startActivity(exitView);
-            }
-        });
     }
 }
