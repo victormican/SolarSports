@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.solarsports.models.UserSession;
+
 public class Registro extends AppCompatActivity {
 
 
@@ -83,6 +85,9 @@ public class Registro extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+
+                // Cierra la sesión de UserSesion
+                UserSession.getInstance().logout();
                 startActivity(exitView);
             }
         });

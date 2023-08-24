@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.solarsports.models.UserSession;
+
 public class HomeActivity extends AppCompatActivity {
 
     ImageView exit;
@@ -82,6 +84,12 @@ public class HomeActivity extends AppCompatActivity {
         exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                // Cierra la sesión de UserSesion
+                UserSession.getInstance().logout();
+
+                // Luego, inicia la actividad de inicio de sesión
+                startActivity(loginView);
                 startActivity(loginView);
             }
         });

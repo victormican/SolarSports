@@ -10,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.solarsports.models.UserSession;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -100,6 +102,9 @@ public class Beneficios extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+
+                // Cierra la sesión de UserSesion
+                UserSession.getInstance().logout();
                 startActivity(exitView);
             }
         });

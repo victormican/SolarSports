@@ -113,5 +113,7 @@ public class UserSession {
         password2 = null;
         name = null;
     }
-
+    public void logout() {
+        clearSession();
+    }
 }

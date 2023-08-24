@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.solarsports.models.UserSession;
+
 public class Buscar extends AppCompatActivity {
     ImageView ImageViewExit;
 
@@ -75,6 +77,9 @@ public class Buscar extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+
+                // Cierra la sesión de UserSesion
+                UserSession.getInstance().logout();
                 startActivity(exitView);
             }
         });

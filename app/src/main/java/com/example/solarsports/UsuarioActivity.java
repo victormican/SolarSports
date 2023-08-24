@@ -148,6 +148,9 @@ public class UsuarioActivity extends AppCompatActivity {
         ImageViewExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                // Cierra la sesión de UserSesion
+                UserSession.getInstance().logout();
                 startActivity(exitView);
             }
         });
