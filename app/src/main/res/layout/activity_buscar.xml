@@ -53,45 +53,11 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="20dp"
-        android:layout_weight="0"
-        android:background="#0277BD"
-        android:backgroundTintMode="add"
-        android:orientation="horizontal"
-        android:paddingTop="12dp"
-        android:paddingBottom="12dp">
-
-        <TextView
-            android:id="@+id/textViewBuscar"
-            android:layout_width="258dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingLeft="30dp"
-            android:paddingTop="12dp"
-            android:paddingBottom="12dp"
-            android:text="Buscar" />
-
-        <ImageView
-            android:id="@+id/imageViewBuscar"
-            android:layout_width="164dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/search_fill0_wght400_grad0_opsz48" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
         android:layout_marginStart="0dp"
         android:layout_marginTop="0dp"
         android:layout_marginEnd="0dp"
-        android:layout_marginBottom="0dp"
+        android:layout_marginBottom="10dp"
         android:layout_weight="0"
         android:background="#0277BD"
         android:backgroundTintMode="add"
@@ -103,7 +69,7 @@
         <EditText
             android:id="@+id/editTextSearch"
             android:layout_width="271dp"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_weight="0"
             android:ems="10"
             android:hint="Busqueda"
@@ -118,21 +84,145 @@
 
     </LinearLayout>
 
+    <TableLayout
+        android:id="@+id/tableBusquedas"
+        android:layout_width="380dp"
+        android:layout_height="220dp"
+        android:gravity="center_horizontal"
+        android:paddingBottom="0dp">
+
+        <!-- Encabezados de la tabla -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#283593">
+
+            <TextView
+                android:id="@+id/textViewEMes"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="MES"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewPROMEDIO"
+                android:layout_width="75dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:text="PROMEDIO ENERGIA"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewCategoria"
+                android:layout_width="100dp"
+                android:layout_height="39dp"
+                android:layout_weight="0"
+                android:text="CATEGORIA"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewAhorro"
+                android:layout_width="85dp"
+                android:layout_height="36dp"
+                android:layout_weight="0"
+                android:text="AHORRO"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/tvContadorRegistros2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="Registros mostrados: 0-0 de 0" />
+
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="bottom"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="20dp"
-        android:layout_weight="1"
-        android:background="#0277BD"
-        android:backgroundTintMode="add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
         android:orientation="horizontal"
-        android:paddingLeft="30dp"
-        android:paddingTop="12dp"
-        android:paddingBottom="12dp"/>
+        android:paddingBottom="0dp">
+
+        <ImageView
+            android:id="@+id/imageViewAtras"
+            android:layout_width="32dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/arrow_back_ios_fill0_wght400_grad0_opsz48" />
+
+        <TextView
+            android:id="@+id/textViewPages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="16dp"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/imageViewAdelante"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_weight="0"
+            app:srcCompat="@drawable/arrow_forward_ios_fill0_wght400_grad0_opsz48" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:orientation="horizontal"
+            android:paddingTop="0dp">
+
+            <RadioButton
+                android:id="@+id/radioButtonRegistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:buttonTint="@color/blue"
+                android:text="Registros" />
+
+            <RadioButton
+                android:id="@+id/radioButtonPaneles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:buttonTint="@color/blue"
+                android:text="Paneles" />
+
+            <RadioButton
+                android:id="@+id/radioButtonCanchas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:buttonTint="@color/blue"
+                android:text="Canchas" />
+
+            <RadioButton
+                android:id="@+id/radioButtonGimnasios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:buttonTint="@color/blue"
+                android:text="Gimnasios" />
+
+        </RadioGroup>
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -141,7 +231,7 @@
         android:clipToPadding="true"
         android:gravity="bottom"
         android:orientation="horizontal"
-        android:paddingTop="120dp">
+        android:paddingTop="17dp">
 
         <ImageView
             android:id="@+id/imageViewHomeIcon"
@@ -220,6 +310,7 @@
             tools:layout_conversion_absoluteWidth="52dp"
             tools:layout_editor_absoluteX="341dp"
             tools:layout_editor_absoluteY="795dp" />
+
     </LinearLayout>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

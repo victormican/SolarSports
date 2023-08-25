@@ -77,7 +77,7 @@ public class Estadisticas extends AppCompatActivity {
 
         imageViewAtras = findViewById(R.id.imageViewAtras);
 
-    imageViewAdelante = findViewById(R.id.imageViewAdelante);
+        imageViewAdelante = findViewById(R.id.imageViewAdelante);
 
 
         Intent exitView = new Intent(this, LoginActivity.class);
@@ -315,41 +315,6 @@ public class Estadisticas extends AppCompatActivity {
                 300, // Ancho de 100dp para MES
                 100 // Alto deseado para MES (en pixeles)
         ));
-        headerRow.addView(headerCell4);
-
-        tableEstadisticas.addView(headerRow);
-    }
-
-    private void addHeader2() {
-        TableRow headerRow = new TableRow(this);
-
-
-        TextView headerCell1 = new TextView(this);
-        headerCell1.setText("MES");
-        headerCell1.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-        headerCell1.setTextColor(getResources().getColor(R.color.white)); // Cambia el color del texto a blanco
-        headerCell1.setBackgroundResource(R.color.blue); // Cambia esto al color de fondo deseado
-        headerRow.addView(headerCell1);
-
-        TextView headerCell2 = new TextView(this);
-        headerCell2.setText("PROMEDIO ENERGIA");
-        headerCell2.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-        headerCell1.setTextColor(getResources().getColor(R.color.white)); // Cambia el color del texto a blanco
-        headerCell1.setBackgroundResource(R.color.blue);
-        headerRow.addView(headerCell2);
-
-        TextView headerCell3 = new TextView(this);
-        headerCell3.setText("CATEGORIA");
-        headerCell3.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-        headerCell1.setTextColor(getResources().getColor(R.color.white)); // Cambia el color del texto a blanco
-        headerCell1.setBackgroundResource(R.color.blue);
-        headerRow.addView(headerCell3);
-
-        TextView headerCell4 = new TextView(this);
-        headerCell4.setText("AHORRO");
-        headerCell4.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-        headerCell1.setTextColor(getResources().getColor(R.color.white)); // Cambia el color del texto a blanco
-        headerCell1.setBackgroundResource(R.color.blue);
         headerRow.addView(headerCell4);
 
         tableEstadisticas.addView(headerRow);

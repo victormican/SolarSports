@@ -2,8 +2,29 @@ package com.example.solarsports.models;
 
 public class PanelSolar {
 
+    private int panelCount;
+    String nombreterraza;
+    String nombrelugar;
+
+    public PanelSolar(String nombreterraza, String nombrelugar, float ancho, float longitud, float potencia, float horas, String mes, String categoria, String usuario) {
+        this.nombreterraza = nombreterraza;
+        this.nombrelugar = nombrelugar;
+        this.ancho = ancho;
+        this.longitud = longitud;
+        this.potencia = potencia;
+        this.horas = horas;
+        this.mes = mes;
+        this.categoria = categoria;
+        this.usuario = usuario;
+    }
+
     float ancho;
+
+
+
     float longitud;
+
+
 
     float potencia;
 
@@ -11,22 +32,24 @@ public class PanelSolar {
 
     String mes;
 
-    String nombreterraza;
 
     String categoria;
 
-
-    public PanelSolar(float ancho, float longitud, float potencia, float horas, String mes, String nombreterraza, String categoria, String usuario) {
-        this.ancho = ancho;
-        this.longitud = longitud;
-        this.potencia = potencia;
-        this.horas = horas;
-        this.mes = mes;
-        this.nombreterraza = nombreterraza;
+    public PanelSolar(String categoria, String usuario) {
         this.categoria = categoria;
         this.usuario = usuario;
     }
 
+    String usuario;
+
+
+    public String getNombrelugar() {
+        return nombrelugar;
+    }
+
+    public void setNombrelugar(String nombrelugar) {
+        this.nombrelugar = nombrelugar;
+    }
     public String getCategoria() {
         return categoria;
     }
@@ -43,21 +66,6 @@ public class PanelSolar {
     public void setUsuario(String usuario) {
         this.usuario = usuario;
     }
-
-    public PanelSolar(float ancho, float longitud, float potencia, float horas, String mes, String nombreterraza, String usuario) {
-        this.ancho = ancho;
-        this.longitud = longitud;
-        this.potencia = potencia;
-        this.horas = horas;
-        this.mes = mes;
-        this.nombreterraza = nombreterraza;
-        this.usuario = usuario;
-    }
-
-    private String usuario;
-
-
-
 
 
     public float getAncho() {
@@ -109,13 +117,12 @@ public class PanelSolar {
     }
 
 
-
-    public PanelSolar(float ancho, float longitud, float potencia, float horas, String mes, String nombreterraza) {
-        this.ancho = ancho;
-        this.longitud = longitud;
-        this.potencia = potencia;
-        this.horas = horas;
-        this.mes = mes;
-        this.nombreterraza = nombreterraza;
+    public void incrementPanelCount() {
+        panelCount++;
     }
+
+    public int getPanelCount() {
+        return panelCount;
+    }
+
 }

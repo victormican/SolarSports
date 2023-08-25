@@ -5,6 +5,13 @@ public class EstadisticasData {
     private String nombre;
     private float consumo;
     private float valorkW;
+
+    public EstadisticasData(String nombre, String usuario, String categoria) {
+        this.nombre = nombre;
+        this.usuario = usuario;
+        this.categoria = categoria;
+    }
+
     private String mes;
     private String usuario;
     private String categoria;

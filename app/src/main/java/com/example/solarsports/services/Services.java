@@ -17,8 +17,8 @@ public class Services {
         saveDataToFile("promediosData.txt", averageEnergySavings, averageMoneySavings, categorySumMap);
 
         saveListToFile("panelesList.txt", paneles);
-        saveListToFile("gimnasioList.txt", filterByCategory(registros, "gimnasio"));
-        saveListToFile("canchasList.txt", filterByCategory(registros, "cancha"));
+        //saveListToFile("gimnasioList.txt", filterByCategory(registros, "gimnasio"));
+        //saveListToFile("canchasList.txt", filterByCategory(registros, "cancha"));
     }
 
     public static List<String[]> readRecordsFromFile(String fileName) {
@@ -53,11 +53,8 @@ public class Services {
         return new HashMap<>();
     }
 
-    public static List<String[]> filterByCategory(List<String[]> records, String category) {
-        // ...
-        // Filtrar registros por categoría
-        return new ArrayList<>();
-    }
+
+
 
     public static void saveDataToFile(String fileName, float avgEnergy, float avgMoney, Map<String, Float> categorySumMap) {
         try (PrintWriter writer = new PrintWriter(new FileWriter(fileName))) {
